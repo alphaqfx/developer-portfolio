@@ -12,6 +12,8 @@ import LogoLoop from "@/components/LogoLoop";
 import { assets } from "@/assets/assets";
 import Silk from "@/components/Silk";
 import MagicBento from "@/components/MagicBento";
+import CardNav from "@/components/CardNav.jsx";
+import Galaxy from "@/components/Galaxy.jsx";
 
 
 export default function Home() {
@@ -19,6 +21,38 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
+
+  
+  const items = [
+    {
+      label: "About",
+      bgColor: "#0D0716",
+      textColor: "#fff",
+      links: [
+        { label: "Company", ariaLabel: "About Company" },
+        { label: "Careers", ariaLabel: "About Careers" }
+      ]
+    },
+    {
+      label: "Projects", 
+      bgColor: "#170D27",
+      textColor: "#fff",
+      links: [
+        { label: "Featured", ariaLabel: "Featured Projects" },
+        { label: "Case Studies", ariaLabel: "Project Case Studies" }
+      ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#271E37", 
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email us" },
+        { label: "Twitter", ariaLabel: "Twitter" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn" }
+      ]
+    }
+  ];
 
   const imageLogos = [
     { src: normalize(isDarkMode?assets.aqx_light:assets.aqx), alt: "Alpha QFX", href: "" },
@@ -51,7 +85,7 @@ export default function Home() {
 
   return (
     <>
-    <Particles
+    {/* <Particles
     isDarkMode={isDarkMode}
     particleCount={600}
     particleSpread={20}
@@ -60,8 +94,8 @@ export default function Home() {
     moveParticlesOnHover={false}
     alphaParticles={false}
     disableRotation={false}
-    />
-    <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
+    /> */}
+    {/* <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
       <Silk
         speed={10}
         scale={1}
@@ -69,8 +103,28 @@ export default function Home() {
         noiseIntensity={1.5}
         rotation={4.5}
       />
-    </div>
-    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+    </div> */}
+    <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
+  <Galaxy 
+    mouseRepulsion={false}
+    mouseInteraction={false}
+    density={2}
+    glowIntensity={0.25}
+    saturation={0}
+    hueShift={240}
+  />
+</div>
+    {/* <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} /> */}
+    <CardNav
+      logo={isDarkMode?assets.logo_dark:assets.logo}
+      logoAlt="Company Logo"
+      items={items}
+      baseColor="#fff"
+      menuColor="#000"
+      buttonBgColor="#111"
+      buttonTextColor="#fff"
+      ease="power3.out"
+    />
     <Header isDarkMode={isDarkMode} />
     <About isDarkMode={isDarkMode} />
     <div className="mx-auto h-screen flex flex-col items-center justify-center gap-4"><MagicBento 
@@ -107,3 +161,4 @@ export default function Home() {
     </>
   );
 }
+

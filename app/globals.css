@@ -4,8 +4,8 @@
 
 :root {
   --color-light-hover: #fcf4ff;
-  --color-dark-hover: #2a004a;
-  --color-dark-theme: #11001F;
+  --color-dark-hover: #1f1f1f;
+  --color-dark-theme: #000000;
 
   --font-outfit: "Outfit", sans-serif;
   --font-jost: "jost", serif;
