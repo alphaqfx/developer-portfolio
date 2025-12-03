@@ -2,7 +2,7 @@ import { assets, workData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const Portfolio = ({isDarkMode}) => {
+const Portfolio = ({}) => {
 
   return (
     <div id='portfolio' className='w-full px-[12%] py-10 scroll-mt20'>
@@ -10,7 +10,7 @@ const Portfolio = ({isDarkMode}) => {
       <h2 className='text-center text-5xl font-jost'>My Latest Works</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>Here are some of my recent projects that showcase my skills and expertise in digital marketing.</p>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 my-10 gap-5 dark:text-black justify-center justify-items-center'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 my-10 gap-5 justify-center justify-items-center'>
         
         <div className="relative w-full max-w-2xl h-0 pb-[56.25%] rounded-2xl overflow-hidden shadow-lg">
           <iframe
@@ -67,9 +67,9 @@ const Portfolio = ({isDarkMode}) => {
           ></iframe>
         </div>
       </div>
-      
-    <a href="" className='backdrop-blur-sm w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--color-light-hover)] duration-500 dark:text-white dark:border-white dark:hover:bg-[var(--color-dark-hover)]'>Show More
-        <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt="right arrow" className='w-4'/>
+
+    <a href="" className='backdrop-blur-sm w-max flex items-center justify-center gap-2 text-white border-[0.5px] border-white rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--color-dark-hover)] duration-500'>Show More
+        <Image src={assets.right_arrow_bold_dark} alt="right arrow" className='w-4'/>
     </a>
     </div>
 

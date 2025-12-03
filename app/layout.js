@@ -24,9 +24,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth dark">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${jost.variable} ${strait.variable} ${lexend.variable} antialiased leading-8 overflow-x-hidden bg-white dark:bg-[var(--color-dark-theme)] dark:text-white`}
+        className={`${outfit.variable} ${jost.variable} ${strait.variable} ${lexend.variable} antialiased leading-8 overflow-x-hidden bg-black`}
       >
         {children}
       </body>

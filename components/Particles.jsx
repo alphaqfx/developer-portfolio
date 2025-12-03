@@ -85,7 +85,7 @@ const fragment = /* glsl */ `
 `;
 
 const Particles = ({
-  isDarkMode,
+  
   particleCount = 200,
   particleSpread = 10,
   speed = 0.1,
