@@ -14,6 +14,7 @@ import Silk from "@/components/Silk";
 import MagicBento from "@/components/MagicBento";
 import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
+import GradualBlur from "@/components/GradualBlur.jsx";
 
 
 export default function Home() {
@@ -64,35 +65,27 @@ export default function Home() {
 
   return (
     <>
-    {/* <Particles
-    particleCount={600}
-    particleSpread={20}
-    speed={0.1}
-    particleBaseSize={100}
-    moveParticlesOnHover={false}
-    alphaParticles={false}
-    disableRotation={false}
-    /> */}
-    {/* <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
-      <Silk
-        speed={10}
-        scale={1}
-        color="#9c16efff"
-        noiseIntensity={1.5}
-        rotation={4.5}
-      />
-    </div> */}
     <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
-  <Galaxy 
-    mouseRepulsion={false}
-    mouseInteraction={false}
-    density={2}
-    glowIntensity={0.25}
-    saturation={0}
-    hueShift={240}
-  />
-</div>
-    {/* <Navbar /> */}
+      <Galaxy 
+        mouseRepulsion={false}
+        mouseInteraction={false}
+        density={2}
+        glowIntensity={0.25}
+        saturation={0}
+        hueShift={240}
+      />
+    </div>    
+    <GradualBlur
+      target="page"
+      position="top"
+      height="8.25rem"
+      strength={1.5}
+      divCount={6}
+      curve="bezier"
+      exponential={true}
+      opacity={1}
+    />
+  <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 99 }}>
     <CardNav
       logo={assets.logo}
       logoAlt="Company Logo"
@@ -103,6 +96,7 @@ export default function Home() {
       buttonTextColor="#fff"
       ease="power3.out"
     />
+  </div>
     <Header />
     <About />
     <div className="mx-auto h-screen flex flex-col items-center justify-center gap-4"><MagicBento
