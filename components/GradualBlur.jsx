@@ -10,7 +10,7 @@ const DEFAULT_CONFIG = {
   height: '6rem',
   divCount: 5,
   exponential: false,
-  zIndex: 90,
+  zIndex: 50,
   animated: false,
   duration: '0.3s',
   easing: 'ease-out',

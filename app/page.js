@@ -78,14 +78,14 @@ export default function Home() {
     <GradualBlur
       target="page"
       position="top"
-      height="8.25rem"
+      height="8.5rem"
       strength={1.5}
-      divCount={6}
+      divCount={6.0}
       curve="bezier"
       exponential={true}
       opacity={1}
     />
-  <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 99 }}>
+  <div style={{ position: "relative", top: 0, left: 0, width: "100%", height: "100%", zIndex: 90}}>
     <CardNav
       logo={assets.logo}
       logoAlt="Company Logo"

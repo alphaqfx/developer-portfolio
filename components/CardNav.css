@@ -7,6 +7,7 @@
   max-width: 800px;
   z-index: 99;
   box-sizing: border-box;
+  padding-top: 10px;
 }
 
 .card-nav {
