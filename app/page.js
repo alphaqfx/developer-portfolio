@@ -65,71 +65,93 @@ export default function Home() {
 
   return (
     <>
-    <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
-      <Galaxy 
-        mouseRepulsion={false}
-        mouseInteraction={false}
-        density={2}
-        glowIntensity={0.25}
-        saturation={0}
-        hueShift={240}
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
+        }}
+      >
+        <Galaxy
+          mouseRepulsion={false}
+          mouseInteraction={false}
+          density={2}
+          glowIntensity={0.25}
+          saturation={0}
+          hueShift={240}
+        />
+      </div>
+      <GradualBlur
+        target="page"
+        position="top"
+        height="8.5rem"
+        strength={1.5}
+        divCount={6.0}
+        curve="bezier"
+        exponential={true}
+        opacity={1}
       />
-    </div>    
-    <GradualBlur
-      target="page"
-      position="top"
-      height="8.5rem"
-      strength={1.5}
-      divCount={6.0}
-      curve="bezier"
-      exponential={true}
-      opacity={1}
-    />
-  <div style={{ position: "relative", top: 0, left: 0, width: "100%", height: "100%", zIndex: 90}}>
-    <CardNav
-      logo={assets.logo}
-      logoAlt="Company Logo"
-      items={items}
-      baseColor="#fff"
-      menuColor="#000"
-      buttonBgColor="#111"
-      buttonTextColor="#fff"
-      ease="power3.out"
-    />
-  </div>
-    <Header />
-    <About />
-    <div className="mx-auto h-screen flex flex-col items-center justify-center gap-4"><MagicBento
-  textAutoHide={true}
-  enableStars={true}
-  enableSpotlight={false}
-  enableBorderGlow={true}
-  enableTilt={false}
-  enableMagnetism={true}
-  clickEffect={true}
-  spotlightRadius={300}
-  particleCount={12}
-  glowColor="132, 0, 255"
-/></div>
-    <Services />
-    <Portfolio />
-    <div style={{ height: '200px', position: 'relative'}}>
-      <h4 className='text-center mb-6 text-2xl font-jost'>Trusted by Brands</h4>
-      <LogoLoop
-        logos={imageLogos}
-        speed={75}
-        direction="left"
-        logoHeight={100}
-        gap={50}
-        pauseOnHover
-        scaleOnHover
-        fadeOut
-        fadeOutColor={"#000000ff"}
-        ariaLabel="Technology partners"
-      />
-    </div>
-    <Contact />
-    <Footer />
+      <div
+        style={{
+          position: "relative",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 90,
+        }}
+      >
+        <CardNav
+          logo={assets.logo}
+          logoAlt="Company Logo"
+          items={items}
+          baseColor="#fff"
+          menuColor="#000"
+          buttonBgColor="#111"
+          buttonTextColor="#fff"
+          ease="power3.out"
+        />
+      </div>
+      <Header />
+      <About />
+      <div className="mx-auto h-screen flex flex-col items-center justify-center gap-4" style={{ position: "relative", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
+        <MagicBento
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={false}
+          enableBorderGlow={true}
+          enableTilt={false}
+          enableMagnetism={true}
+          clickEffect={true}
+          spotlightRadius={300}
+          particleCount={12}
+          glowColor="132, 0, 255"
+        />
+      </div>
+      <Services />
+      <Portfolio />
+      <div style={{ height: "200px", position: "relative" }}>
+        <h4 className="text-center mb-6 text-2xl font-jost">
+          Trusted by Brands
+        </h4>
+        <LogoLoop
+          logos={imageLogos}
+          speed={75}
+          direction="left"
+          logoHeight={100}
+          gap={50}
+          pauseOnHover
+          scaleOnHover
+          fadeOut
+          fadeOutColor={"#000000ff"}
+          ariaLabel="Technology partners"
+        />
+      </div>
+      <Contact />
+      <Footer />
     </>
   );
 }
