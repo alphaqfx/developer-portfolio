@@ -22,9 +22,9 @@ export default function Home() {
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
   
-  const items = [
+  const navbarItems = [
     {
-      label: "About",
+      label: "Home",
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
@@ -78,7 +78,7 @@ export default function Home() {
         <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
-          density={2}
+          density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
@@ -107,7 +107,7 @@ export default function Home() {
         <CardNav
           logo={assets.logo}
           logoAlt="Company Logo"
-          items={items}
+          items={navbarItems}
           baseColor="#fff"
           menuColor="#000"
           buttonBgColor="#111"

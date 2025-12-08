@@ -1,6 +1,7 @@
 'use client';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import Image from 'next/image'
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
@@ -151,7 +152,7 @@ const CardNav = ({
           </div>
 
           <div className="logo-container">
-            <img src={logo} alt={logoAlt} className="logo" />
+            <Image src={logo} alt={logoAlt} className="w-32 cursor-pointer " />
           </div>
 
           <button
@@ -159,7 +160,7 @@ const CardNav = ({
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
-            Get Started
+            Contact Me
           </button>
         </div>
 
