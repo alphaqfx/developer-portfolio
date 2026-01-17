@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${jost.variable} ${strait.variable} ${lexend.variable} antialiased leading-8 overflow-x-hidden bg-black`}
+        className={`${outfit.variable} ${jost.variable} ${strait.variable} ${lexend.variable} antialiased leading-8 overflow-x-hidden text-white bg-black`}
       >
         {children}
       </body>

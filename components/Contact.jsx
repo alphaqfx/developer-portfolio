@@ -33,19 +33,20 @@ const Contact = () => {
   };
   return (
     <div id='contact'
-      className='w-full px-[12%] py-10 scroll-mt20 bg-no-repeat bg-center bg-[length:90%_auto]'>
-      <h4 className='text-center mb-2 text-xl font-jost'>Connect with me</h4>
-      <h2 className='text-center text-5xl font-jost'>Get in touch</h2>
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+      className='w-full px-[12%] py-40 scroll-mt20 bg-no-repeat bg-center bg-[length:90%_auto]'>
+      
+      <h4 className='text-white text-center mb-2 text-xl font-jost'>Connect with me</h4>
+      <h2 className='text-white text-center text-5xl font-jost'>Get in touch</h2>
+      <p className='text-white text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
       <form onSubmit={onSubmit} className='max-w-2xl mx-auto'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-10 mb-8'>
             <input
-            name='name' type="text" placeholder='Enter Your Name' required className='backdrop-blur-sm flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md'/>
+            name='name' type="text" placeholder='Enter Your Name' required className='backdrop-blur-sm flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md text-white'/>
             <input
-            name='email' type="email" placeholder='Enter Your Email' required className='backdrop-blur-sm flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md'/>
+            name='email' type="email" placeholder='Enter Your Email' required className='backdrop-blur-sm flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md text-white'/>
         </div>
         <textarea
-        name='message' rows="6" placeholder='Enter Your Message' required className='backdrop-blur-sm w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md'></textarea>
+        name='message' rows="6" placeholder='Enter Your Message' required className='backdrop-blur-sm w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md text-white'></textarea>
         <br></br>
         <br></br>
         <button

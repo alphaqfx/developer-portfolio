@@ -1,7 +1,9 @@
 'use client';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image'
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
@@ -22,6 +24,7 @@ const CardNav = ({
   const navRef = useRef(null);
   const cardsRef = useRef([]);
   const tlRef = useRef(null);
+  const router = useRouter();
 
   const calculateHeight = () => {
     const navEl = navRef.current;
@@ -117,6 +120,26 @@ const CardNav = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        if (isExpanded) {
+          const tl = tlRef.current;
+          if (tl) {
+            setIsHamburgerOpen(false);
+            tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
+            tl.reverse();
+          }
+        }
+      }
+    };
+
+    if (isExpanded) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [isExpanded]);
+
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
@@ -135,6 +158,42 @@ const CardNav = ({
     if (el) cardsRef.current[i] = el;
   };
 
+  const handleLinkClick = (href) => {
+    // Close the menu and navigate after animation completes
+    if (isExpanded) {
+      const tl = tlRef.current;
+      if (tl) {
+        setIsHamburgerOpen(false);
+        tl.eventCallback('onReverseComplete', () => {
+          setIsExpanded(false);
+          router.push(href);
+        });
+        tl.reverse();
+      }
+    } else {
+      // If menu is not expanded, navigate immediately
+      router.push(href);
+    }
+  };
+
+  const handleLogoClick = () => {
+    // Close the menu and navigate after animation completes
+    if (isExpanded) {
+      const tl = tlRef.current;
+      if (tl) {
+        setIsHamburgerOpen(false);
+        tl.eventCallback('onReverseComplete', () => {
+          setIsExpanded(false);
+          router.push('/');
+        });
+        tl.reverse();
+      }
+    } else {
+      // If menu is not expanded, navigate immediately
+      router.push('/');
+    }
+  };
+
   return (
     <div className={`card-nav-container ${className}`}>
       <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
@@ -151,7 +210,7 @@ const CardNav = ({
             <div className="hamburger-line" />
           </div>
 
-          <div className="logo-container">
+          <div className="logo-container" onClick={handleLogoClick}>
             <Image src={logo} alt={logoAlt} className="w-32 cursor-pointer " />
           </div>
 
@@ -159,8 +218,9 @@ const CardNav = ({
             type="button"
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+            onClick={() => handleLinkClick('/contact')}
           >
-            Contact Me
+            Hire Me!
           </button>
         </div>
 
@@ -175,10 +235,18 @@ const CardNav = ({
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
-                  <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
+                  <div
+                    key={`${lnk.label}-${i}`}
+                    className="nav-card-link"
+                    onClick={() => handleLinkClick(lnk.href)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={lnk.ariaLabel}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
                     {lnk.label}
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>

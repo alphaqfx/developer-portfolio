@@ -1,46 +1,43 @@
 'use client'
-import Header from "@/components/Header";
+import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
-import DarkVeil from "@/components/DarkVeil.jsx";
 
 
-export default function Home() {
+export default function PortfolioPage() {
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
-  
   const navbarItems = [
     {
-      label: "Explore",
-      bgColor: "#160707ff",
+      label: "Home",
+      bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Home", ariaLabel: "Go to Home", href: "/" },
-        { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Services", ariaLabel: "Go to Services", href: "/services" }
+        { label: "Home", ariaLabel: "Back to Home", href: "/" },
+        { label: "About", ariaLabel: "Go to About", href: "/about" }
       ]
     },
     {
       label: "Projects", 
-      bgColor: "#270d0dff",
+      bgColor: "#170D27",
       textColor: "#fff",
       links: [
-        { label: "Portfolio", ariaLabel: "Go to Portfolio", href: "/portfolio" },
+        { label: "Services", ariaLabel: "Go to Services", href: "/services" },
         { label: "Case Studies", ariaLabel: "View Case Studies", href: "/portfolio" }
       ]
     },
     {
       label: "Contact",
-      bgColor: "#371e1eff", 
+      bgColor: "#271E37", 
       textColor: "#fff",
       links: [
-        { label: "Email Me", ariaLabel: "Email", href: "mailto:vigneshuthiravelu@gmail.com", target: "_blank" },
-        { label: "GitHub", ariaLabel: "GitHub", href: "#", target: "_blank" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer" }
+        { label: "Email", ariaLabel: "Email us", href: "/contact" },
+        { label: "Twitter", ariaLabel: "Twitter", href: "#" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "#" }
       ]
     }
   ];
@@ -57,23 +54,14 @@ export default function Home() {
           zIndex: -1,
         }}
       >
-        <DarkVeil
-    hueShift={-120}
-    noiseIntensity={0.1}
-    scanlineIntensity={0.05}
-    speed={1.5}
-    scanlineFrequency={0}
-    warpAmount={0}
-    resolutionScale={1.5}
-  />
-        {/* <Galaxy
+        <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
           density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
-        /> */}
+        />
       </div>
       <GradualBlur
         target="page"
@@ -98,7 +86,6 @@ export default function Home() {
         <CardNav
           logo={assets.logo}
           logoAlt="Company Logo"
-          logoHref="/"
           items={navbarItems}
           baseColor="#fff"
           menuColor="#000"
@@ -107,9 +94,8 @@ export default function Home() {
           ease="power3.out"
         />
       </div>
-      <Header />
-      {/* <Footer /> */}
+      <Portfolio />
+      <Footer />
     </>
   );
 }
-
