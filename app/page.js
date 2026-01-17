@@ -16,30 +16,31 @@ export default function Home() {
   const navbarItems = [
     {
       label: "Explore",
-      bgColor: "#160707ff",
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Home", ariaLabel: "Go to Home", href: "/" },
         { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Services", ariaLabel: "Go to Services", href: "/services" }
+        { label: "Expertise", ariaLabel: "Go to Services", href: "/services" }
       ]
     },
     {
-      label: "Projects", 
-      bgColor: "#270d0dff",
+      label: "Portfolio", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Portfolio", ariaLabel: "Go to Portfolio", href: "/portfolio" },
-        { label: "Case Studies", ariaLabel: "View Case Studies", href: "/portfolio" }
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/portfolio" },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/portfolio" },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/portfolio" }
       ]
     },
     {
-      label: "Contact",
-      bgColor: "#371e1eff", 
+      label: "Connect",
+      bgColor: "#14001cff", 
       textColor: "#fff",
       links: [
-        { label: "Email Me", ariaLabel: "Email", href: "mailto:vigneshuthiravelu@gmail.com", target: "_blank" },
-        { label: "GitHub", ariaLabel: "GitHub", href: "#", target: "_blank" },
+        { label: "Email", ariaLabel: "Email", href: "/contact" },
+        { label: "Instagram", ariaLabel: "Instagram", href: "#", target: "_blank" },
         { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer" }
       ]
     }

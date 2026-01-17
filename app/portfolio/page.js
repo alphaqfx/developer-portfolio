@@ -13,31 +13,33 @@ export default function PortfolioPage() {
 
   const navbarItems = [
     {
-      label: "Home",
-      bgColor: "#0D0716",
+      label: "Explore",
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Home", ariaLabel: "Back to Home", href: "/" },
-        { label: "About", ariaLabel: "Go to About", href: "/about" }
+        { label: "Home", ariaLabel: "Go to Home", href: "/" },
+        { label: "About Me", ariaLabel: "Go to About", href: "/about" },
+        { label: "Expertise", ariaLabel: "Go to Services", href: "/services" }
       ]
     },
     {
-      label: "Projects", 
-      bgColor: "#170D27",
+      label: "Portfolio", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Services", ariaLabel: "Go to Services", href: "/services" },
-        { label: "Case Studies", ariaLabel: "View Case Studies", href: "/portfolio" }
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/portfolio" },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/portfolio" },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/portfolio" }
       ]
     },
     {
-      label: "Contact",
-      bgColor: "#271E37", 
+      label: "Connect",
+      bgColor: "#14001cff", 
       textColor: "#fff",
       links: [
-        { label: "Email", ariaLabel: "Email us", href: "/contact" },
-        { label: "Twitter", ariaLabel: "Twitter", href: "#" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "#" }
+        { label: "Email", ariaLabel: "Email", href: "/contact" },
+        { label: "Instagram", ariaLabel: "Instagram", href: "#", target: "_blank" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer" }
       ]
     }
   ];

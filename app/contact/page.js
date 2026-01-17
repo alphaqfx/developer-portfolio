@@ -5,6 +5,7 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import Beams from "@/components/Beams.jsx";
 
 
 export default function ContactPage() {
@@ -13,31 +14,33 @@ export default function ContactPage() {
 
   const navbarItems = [
     {
-      label: "Home",
-      bgColor: "#0D0716",
+      label: "Explore",
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Home", ariaLabel: "Back to Home", href: "/" },
-        { label: "About", ariaLabel: "Go to About", href: "/about" }
+        { label: "Home", ariaLabel: "Go to Home", href: "/" },
+        { label: "About Me", ariaLabel: "Go to About", href: "/about" },
+        { label: "Expertise", ariaLabel: "Go to Services", href: "/services" }
       ]
     },
     {
-      label: "Projects", 
-      bgColor: "#170D27",
+      label: "Portfolio", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Portfolio", ariaLabel: "Go to Portfolio", href: "/portfolio" },
-        { label: "Services", ariaLabel: "Go to Services", href: "/services" }
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/portfolio" },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/portfolio" },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/portfolio" }
       ]
     },
     {
-      label: "Navigate",
-      bgColor: "#271E37", 
+      label: "Connect",
+      bgColor: "#14001cff", 
       textColor: "#fff",
       links: [
-        { label: "Home", ariaLabel: "Back to Home", href: "/" },
-        { label: "Portfolio", ariaLabel: "Go to Portfolio", href: "/portfolio" },
-        { label: "About", ariaLabel: "Go to About", href: "/about" }
+        { label: "Email", ariaLabel: "Email", href: "/contact" },
+        { label: "Instagram", ariaLabel: "Instagram", href: "#", target: "_blank" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer" }
       ]
     }
   ];
@@ -54,14 +57,24 @@ export default function ContactPage() {
           zIndex: -1,
         }}
       >
-        <Galaxy
+        <Beams
+    beamWidth={2.5}
+    beamHeight={25}
+    beamNumber={30}
+    lightColor="#ffffff"
+    speed={3}
+    noiseIntensity={1.75}
+    scale={0.2}
+    rotation={45}
+  />
+        {/* <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
           density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
-        />
+        /> */}
       </div>
       <GradualBlur
         target="page"
