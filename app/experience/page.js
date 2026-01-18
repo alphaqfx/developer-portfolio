@@ -7,7 +7,7 @@ import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 
 
-export default function ServicesPage() {
+export default function ExperiencePage() {
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
@@ -19,7 +19,7 @@ export default function ServicesPage() {
       links: [
         { label: "Home", ariaLabel: "Go to Home", href: "/" },
         { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Expertise", ariaLabel: "Go to Services", href: "/services" }
+        { label: "Expertise", ariaLabel: "Go to Expertise", href: "/expertise" }
       ]
     },
     {
@@ -27,9 +27,9 @@ export default function ServicesPage() {
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Projects", ariaLabel: "Go to Projects", href: "/portfolio" },
-        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/portfolio" },
-        { label: "Experience", ariaLabel: "Go to Experience", href: "/portfolio" }
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/projects" },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/certificates" },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/experience" }
       ]
     },
     {

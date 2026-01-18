@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
+import ElectricBorder from './ElectricBorder'
 import { info } from 'autoprefixer'
 
 const About = ({  }) => {
@@ -16,13 +17,17 @@ return (
         <p className='mb-10 max-w-2xl font-jost'>
             I am a highly skilled and versatile full stack web developer with expertise in building scalable and efficient web applications. Proficient in modern frameworks and technologies such as Next.js, React, .NET, and Sitecore. With hands-on experience in building with Microsoft Copilot, Azure Cloud and DevOps practices, I ensure productivity, reliable deployments and optimized performance for enterprise-level solutions.
         </p>
+        
         <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark, title, description},index) => (
                 <li 
-                className='backdrop-blur-sm border-[0.5px] border-gray-400 rounded-xl p-6 hover:bg-[var(--color-dark-hover)] hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)] text-left' key={index}>
-                    <Image src={iconDark} alt={title} className='w-7 flex items-center justify-center'/>
-                    <h3 className='my-4 font-semibold text-white'>{title}</h3>
-                    <p className='text-gray-600 text-white'>{description}</p>
+                
+                 key={index}>
+                    <ElectricBorder className='backdrop-blur-sm border-[0.5px]  rounded-xl p-6 hover:bg-[var(--color-dark-hover)] hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)] text-left'>
+                        <Image src={iconDark} alt={title} className='w-7 flex items-center justify-center'/>
+                        <h3 className='my-4 font-semibold text-white'>{title}</h3>
+                        <p className='text-gray-600 text-white'>{description}</p>
+                    </ElectricBorder>
                 </li>
             ))}
         </ul>

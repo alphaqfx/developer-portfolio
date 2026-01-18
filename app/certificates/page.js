@@ -1,5 +1,5 @@
 'use client'
-import Portfolio from "@/components/Portfolio";
+import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
@@ -7,7 +7,7 @@ import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 
 
-export default function PortfolioPage() {
+export default function CertificatesPage() {
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
@@ -19,7 +19,7 @@ export default function PortfolioPage() {
       links: [
         { label: "Home", ariaLabel: "Go to Home", href: "/" },
         { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Expertise", ariaLabel: "Go to Services", href: "/services" }
+        { label: "Expertise", ariaLabel: "Go to Services", href: "/expertise" }
       ]
     },
     {
@@ -27,9 +27,9 @@ export default function PortfolioPage() {
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
-        { label: "Projects", ariaLabel: "Go to Projects", href: "/portfolio" },
-        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/portfolio" },
-        { label: "Experience", ariaLabel: "Go to Experience", href: "/portfolio" }
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/projects" },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/certificates" },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/experience" }
       ]
     },
     {
@@ -96,7 +96,7 @@ export default function PortfolioPage() {
           ease="power3.out"
         />
       </div>
-      <Portfolio />
+      <Services />
       <Footer />
     </>
   );

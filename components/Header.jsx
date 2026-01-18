@@ -40,7 +40,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="#contact" className='backdrop-blur-sm px-10 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>Contact Me
+            href="/about" className='backdrop-blur-sm px-10 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>About Me
                 <Image src={assets.right_arrow_white} alt="" className='w-4'/>
             </motion.a>
             <motion.a 

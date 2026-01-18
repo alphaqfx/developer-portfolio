@@ -1,18 +1,16 @@
 'use client'
-import Header from "@/components/Header";
+import Portfolio from "@/components/Portfolio";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
-import DarkVeil from "@/components/DarkVeil.jsx";
 
 
-export default function Home() {
+export default function ProjectsPage() {
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
-  
   const navbarItems = [
     {
       label: "Explore",
@@ -21,7 +19,7 @@ export default function Home() {
       links: [
         { label: "Home", ariaLabel: "Go to Home", href: "/" },
         { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Expertise", ariaLabel: "Go to Services", href: "/expertise" }
+        { label: "Expertise", ariaLabel: "Go to Expertise", href: "/expertise" }
       ]
     },
     {
@@ -58,23 +56,14 @@ export default function Home() {
           zIndex: -1,
         }}
       >
-        <DarkVeil
-    hueShift={-120}
-    noiseIntensity={0.1}
-    scanlineIntensity={0.05}
-    speed={1.5}
-    scanlineFrequency={0}
-    warpAmount={0}
-    resolutionScale={1.5}
-  />
-        {/* <Galaxy
+        <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
           density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
-        /> */}
+        />
       </div>
       <GradualBlur
         target="page"
@@ -99,7 +88,6 @@ export default function Home() {
         <CardNav
           logo={assets.logo}
           logoAlt="Company Logo"
-          logoHref="/"
           items={navbarItems}
           baseColor="#fff"
           menuColor="#000"
@@ -108,9 +96,8 @@ export default function Home() {
           ease="power3.out"
         />
       </div>
-      <Header />
-      {/* <Footer /> */}
+      <Portfolio />
+      <Footer />
     </>
   );
 }
-
