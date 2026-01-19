@@ -35,7 +35,7 @@ const CardSwap = ({
   delay = 5000,
   pauseOnHover = false,
   onCardClick,
-  skewAmount = 6,
+  skewAmount = 5,
   easing = 'elastic',
   children
 }) => {

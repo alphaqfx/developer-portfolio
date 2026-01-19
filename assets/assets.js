@@ -69,6 +69,12 @@ import facebook_dark from './facebook_dark.png';
 import facebook_light from './facebook_light.png';
 import youtube_dark from './youtube_dark.png';
 import youtube_light from './youtube_light.png';
+import ai_104 from './ai_104.png';
+import aws from './aws.png';
+import google from './google.png';
+import ibm from './ibm.png';
+import sitecore from './sitecore.png';
+import copilot from './copilot.png';
 
 
 
@@ -144,7 +150,13 @@ export const assets = {
     pplus,
     pplus_light,
     lc,
-    lc_light
+    lc_light,
+    ai_104,
+    aws,
+    google,
+    ibm,
+    sitecore,
+    copilot 
     
 };
 

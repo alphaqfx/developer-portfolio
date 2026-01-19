@@ -1,10 +1,13 @@
 'use client'
+import Image from "next/image";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import Silk from "@/components/Silk";
+import CardSwap, { Card } from "@/components/CardSwap.jsx";
 
 
 export default function CertificatesPage() {
@@ -23,7 +26,7 @@ export default function CertificatesPage() {
       ]
     },
     {
-      label: "Portfolio", 
+      label: "Portfolio",
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
@@ -34,7 +37,7 @@ export default function CertificatesPage() {
     },
     {
       label: "Connect",
-      bgColor: "#14001cff", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email", href: "/contact" },
@@ -56,25 +59,25 @@ export default function CertificatesPage() {
           zIndex: -1,
         }}
       >
-        <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
-          saturation={0}
-          hueShift={240}
+        <Silk
+          speed={4.2}
+          scale={1}
+          color="#0a6685"
+          noiseIntensity={1}
+          rotation={0}
         />
       </div>
-      <GradualBlur
-        target="page"
-        position="top"
-        height="8.5rem"
-        strength={1.5}
-        divCount={6.0}
-        curve="bezier"
-        exponential={true}
-        opacity={1}
-      />
+      <div >
+        <GradualBlur
+          target="page"
+          position="top"
+          height="8.5rem"
+          strength={1.5}
+          divCount={6.0}
+          curve="bezier"
+          exponential={true}
+          opacity={1}
+        /></div>
       <div
         style={{
           position: "relative",
@@ -96,8 +99,58 @@ export default function CertificatesPage() {
           ease="power3.out"
         />
       </div>
-      <Services />
-      <Footer />
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-2">
+        <div className='w-full max-w-xl mx-auto px-6 mt-50'>
+          <h2 className='text-left text-5xl font-jost'>Professional Certifications</h2>
+          <div className='flex w-full flex-col lg:flex-row items-start gap-20 my-10'>
+            <div className='flex-1 text-left'>
+              <h4 className='mb-10 max-w-xl font-jost'>
+                I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
+              </h4>
+            </div>
+          </div>          
+        </div>
+        <div className='lg:mt-40 md:mt-40'>
+        <CardSwap
+            cardDistance={60}
+            verticalDistance={70}
+            delay={5000}
+            pauseOnHover={true}
+          >
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.ai_104} alt="azure" />
+              </div>
+            </Card>
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.aws} alt="aws" />
+              </div>
+            </Card>
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.google} alt="google" />
+              </div>
+            </Card>
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.copilot} alt="copilot" />
+              </div>
+            </Card>
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.ibm} alt="ibm" />
+              </div>
+            </Card>
+            <Card>
+              <div className="py-5" >
+                <Image src={assets.sitecore} alt="sitecore" />
+              </div>
+            </Card>
+        </CardSwap>
+        </div>
+      </div>
     </>
   );
 }

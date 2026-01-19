@@ -1,9 +1,7 @@
 .card-swap-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  
   transform: translate(5%, 20%);
-  transform-origin: bottom right;
 
   perspective: 900px;
   overflow: visible;
@@ -15,7 +13,7 @@
   left: 50%;
   border-radius: 12px;
   border: 1px solid #fff;
-  background: #000;
+  background: #00000050;
 
   transform-style: preserve-3d;
   will-change: transform;
@@ -25,12 +23,12 @@
 
 @media (max-width: 768px) {
   .card-swap-container {
-    transform: scale(0.75) translate(25%, 25%);
+    transform: scale(0.75) translate(15%, 50%);
   }
 }
 
 @media (max-width: 480px) {
   .card-swap-container {
-    transform: scale(0.55) translate(25%, 25%);
+    transform: scale(0.5) translate(-40%, 25%);
   }
 }
