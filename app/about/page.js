@@ -96,8 +96,8 @@ export default function AboutPage() {
           ease="power3.out"
         />
       </div>
-      <About />
-      <Footer />
+      {/* <About /> */}
+      
     </>
   );
 }

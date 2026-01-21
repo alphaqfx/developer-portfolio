@@ -8,6 +8,8 @@ import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 import Silk from "@/components/Silk";
 import CardSwap, { Card } from "@/components/CardSwap.jsx";
+import { toolsData } from "@/assets/assets";
+
 
 
 export default function CertificatesPage() {
@@ -62,7 +64,7 @@ export default function CertificatesPage() {
         <Silk
           speed={4.2}
           scale={1}
-          color="#0a6685"
+          color="#007d53ff"
           noiseIntensity={1}
           rotation={0}
         />
@@ -100,14 +102,24 @@ export default function CertificatesPage() {
         />
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2">
+      <div className='w-full lg:mx-10 max-w-6xl h-screen flex flex-col lg:flex-row items-start '>
         <div className='w-full max-w-xl mx-auto px-6 mt-50'>
-          <h2 className='text-left text-5xl font-jost'>Professional Certifications</h2>
+          <h2 className='text-left text-5xl font-jost leading-tight'>Professional Certifications</h2>
           <div className='flex w-full flex-col lg:flex-row items-start gap-20 my-10'>
             <div className='flex-1 text-left'>
               <h4 className='mb-10 max-w-xl font-jost'>
                 I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
               </h4>
+              <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
+                      <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
+                          {toolsData.map(({tool, link},index) => (tool ? (
+                          <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
+                              <a href={link} target="_blank" rel="noopener noreferrer">
+                                  <Image src={tool} alt="Tool" className='w-5 sm:w-7'/>
+                              </a>
+                          </li>
+                          ):null))}
+                      </ul> 
             </div>
           </div>          
         </div>
@@ -150,7 +162,10 @@ export default function CertificatesPage() {
             </Card>
         </CardSwap>
         </div>
+        
+        
       </div>
+      
     </>
   );
 }
