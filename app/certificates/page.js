@@ -80,7 +80,7 @@ export default function CertificatesPage() {
           exponential={true}
           opacity={1}
         /></div>
-      <div
+      <div 
         style={{
           position: "relative",
           top: 0,
@@ -102,7 +102,7 @@ export default function CertificatesPage() {
         />
       </div>
 
-      <div className='w-full max-w-7xl mx-auto px-6 lg:px-1 flex flex-col lg:flex-row gap-10 items-center py-35 lg:py-50 '>
+      <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row gap-10 items-center py-35 lg:py-50 '>
         <div className='w-full'>
           <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
           <div className='w-full my-8 md:my-10'>
@@ -123,7 +123,7 @@ export default function CertificatesPage() {
             </div>
           </div>          
         </div>
-        <div className='w-full'>
+        <div className='w-full hidden md:block'>
         <CardSwap
             cardDistance={60}
             verticalDistance={55}
