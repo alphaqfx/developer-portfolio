@@ -102,11 +102,11 @@ export default function CertificatesPage() {
         />
       </div>
 
-      <div className='w-full lg:mx-10 max-w-6xl h-screen flex flex-col lg:flex-row items-start '>
-        <div className='w-full max-w-xl mx-auto px-6 mt-50'>
-          <h2 className='text-left text-5xl font-jost leading-tight'>Professional Certifications</h2>
-          <div className='flex w-full flex-col lg:flex-row items-start gap-20 my-10'>
-            <div className='flex-1 text-left'>
+      <div className='w-full max-w-7xl mx-auto px-6 lg:px-1 flex flex-col lg:flex-row gap-10 items-center py-35 lg:py-50 '>
+        <div className='w-full'>
+          <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
+          <div className='w-full my-8 md:my-10'>
+            <div className='text-left'>
               <h4 className='mb-10 max-w-xl font-jost'>
                 I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
               </h4>
@@ -123,10 +123,10 @@ export default function CertificatesPage() {
             </div>
           </div>          
         </div>
-        <div className='lg:mt-40 md:mt-40'>
+        <div className='w-full'>
         <CardSwap
             cardDistance={60}
-            verticalDistance={70}
+            verticalDistance={55}
             delay={5000}
             pauseOnHover={true}
           >
@@ -165,7 +165,7 @@ export default function CertificatesPage() {
         
         
       </div>
-      
+      <Footer />
     </>
   );
 }
