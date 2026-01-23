@@ -5,7 +5,7 @@ import React from 'react'
 const Portfolio = ({}) => {
 
   return (
-    <div id='portfolio' className='w-full px-[12%] py-10 scroll-mt20'>
+    <div id='portfolio' className='w-full px-[12%] mt-40 scroll-mt20'>
       <h4 className='text-center mb-2 text-xl font-jost'>Portfolio</h4>
       <h2 className='text-center text-5xl font-jost'>My Latest Works</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>Here are some of my recent projects that showcase my skills and expertise in digital marketing.</p>

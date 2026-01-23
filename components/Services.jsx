@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 const Services = () => {
   return (
-    <div id='services' className='w-full px-[12%] py-10 scroll-mt20'>
+    <div id='services' className='w-full px-[12%] mt-40 scroll-mt20'>
       <h4 className='text-center mb-2 text-xl font-jost'>What I Offer</h4>
-      <h2 className='text-center text-5xl font-jost'>My Services</h2>
+      <h2 className='text-center text-5xl font-jost'>My Expertise</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
         I offer a wide range of end to end Branding services to help you reach to the target audience and achieve your marketing goals with effective strategies and creative solutions.
       </p>

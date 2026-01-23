@@ -5,6 +5,7 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import DotGrid from "@/components/DotGrid.jsx";
 
 
 export default function ExpertisePage() {
@@ -23,7 +24,7 @@ export default function ExpertisePage() {
       ]
     },
     {
-      label: "Portfolio", 
+      label: "Portfolio",
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
@@ -34,7 +35,7 @@ export default function ExpertisePage() {
     },
     {
       label: "Connect",
-      bgColor: "#14001cff", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email", href: "/contact" },
@@ -56,13 +57,26 @@ export default function ExpertisePage() {
           zIndex: -1,
         }}
       >
-        <Galaxy
+        {/* <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
           density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
+        /> */}
+        <DotGrid
+          dotSize={5}
+          gap={20}
+          baseColor="#211830"
+          activeColor="#7c5cff"
+          proximity={90}
+          speedTrigger={150}
+          shockRadius={300}
+          shockStrength={4}
+          maxSpeed={5000}
+          resistance={750}
+          returnDuration={1.5}
         />
       </div>
       <GradualBlur

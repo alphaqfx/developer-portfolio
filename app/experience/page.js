@@ -5,6 +5,8 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import ColorBends from "@/components/ColorBends.jsx";
+import FloatingLines from "@/components/FloatingLines.jsx";
 
 
 export default function ExperiencePage() {
@@ -23,7 +25,7 @@ export default function ExperiencePage() {
       ]
     },
     {
-      label: "Portfolio", 
+      label: "Portfolio",
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
@@ -34,7 +36,7 @@ export default function ExperiencePage() {
     },
     {
       label: "Connect",
-      bgColor: "#14001cff", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email", href: "/contact" },
@@ -56,13 +58,36 @@ export default function ExperiencePage() {
           zIndex: -1,
         }}
       >
-        <Galaxy
+        {/* <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
           density={1}
           glowIntensity={0.25}
           saturation={0}
           hueShift={240}
+        /> */}
+        {/* <ColorBends
+          rotation={45}
+          speed={0.1}
+          colors={["#006a9fff", "#5288a7ff"]}
+          transparent
+          autoRotate={2.5}
+          scale={1.5}
+          frequency={1.9}
+          warpStrength={1}
+          mouseInfluence={0}
+          parallax={0}
+          noise={0.15}
+        /> */}
+        <FloatingLines
+          linesGradient={["#47c1f5", "#2F4BC0", "#5b47f5"]}
+          animationSpeed={1}
+          interactive={false}
+          bendRadius={1}
+          bendStrength={0}
+          mouseDamping={0.05}
+          parallax={false}
+          parallaxStrength={0.35}
         />
       </div>
       <GradualBlur

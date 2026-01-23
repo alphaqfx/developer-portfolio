@@ -5,6 +5,7 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import LightRays from "@/components/LightRays.jsx";
 
 
 export default function ProjectsPage() {
@@ -56,13 +57,19 @@ export default function ProjectsPage() {
           zIndex: -1,
         }}
       >
-        <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
-          saturation={0}
-          hueShift={240}
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={0.5}
+          lightSpread={1}
+          rayLength={3}
+          pulsating={false}
+          fadeDistance={3}
+          saturation={4}
+          followMouse={false}
+          mouseInfluence={0}
+          noiseAmount={0.15}
+          distortion={0}
         />
       </div>
       <GradualBlur
