@@ -5,6 +5,7 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
+import TiltedCard from "@/components/TiltedCard.jsx";
 
 
 export default function AboutPage() {
@@ -23,7 +24,7 @@ export default function AboutPage() {
       ]
     },
     {
-      label: "Portfolio", 
+      label: "Portfolio",
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
@@ -34,7 +35,7 @@ export default function AboutPage() {
     },
     {
       label: "Connect",
-      bgColor: "#14001cff", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email", href: "/contact" },
@@ -96,8 +97,10 @@ export default function AboutPage() {
           ease="power3.out"
         />
       </div>
-      {/* <About /> */}
+      <About />
       
+      <Footer />
+
     </>
   );
 }

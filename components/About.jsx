@@ -3,22 +3,32 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
 import ElectricBorder from './ElectricBorder'
 import { info } from 'autoprefixer'
+import MagicBento from './MagicBento'
 
-const About = ({  }) => {
-return (
-    <div id='about' className='w-full max-w-6xl mx-auto px-6 py-10 scroll-mt20'>
-        <h4 className='text-center mb-2 text-xl font-jost'>Introduction</h4>
-        <h2 className='text-center text-5xl font-jost'>About Me</h2>
-    <div className='flex w-full flex-col lg:flex-row items-start gap-20 my-20'>
-        <div className='w-64 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
-            <Image src={assets.user_image} alt="" className='w-full rounded-3xl'/>
-        </div>
-        <div className='flex-1 text-left'>
-        <p className='mb-10 max-w-2xl font-jost'>
-            I am a highly skilled and versatile full stack web developer with expertise in building scalable and efficient web applications. Proficient in modern frameworks and technologies such as Next.js, React, .NET, and Sitecore. With hands-on experience in building with Microsoft Copilot, Azure Cloud and DevOps practices, I ensure productivity, reliable deployments and optimized performance for enterprise-level solutions.
-        </p>
-        
-        <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+const About = ({ }) => {
+    return (
+        <div id='about' className='w-full max-w-7xl mx-auto px-6 py-10 mt-30 lg:mt-40 scroll-mt20'>
+            <h2 className='text-center text-5xl font-jost'>About Me</h2>
+            <div className='flex w-full flex-col lg:flex-row items-start gap-20 my-20'>
+                <div className='w-64 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
+                    <Image src={assets.user_image} alt="" className='w-full rounded-3xl' />
+                </div>
+                <div className='flex-1 mx-auto justify-center '>
+                    <MagicBento
+                        textAutoHide={true}
+                        enableStars
+                        enableSpotlight
+                        enableBorderGlow={true}
+                        enableTilt={false}
+                        enableMagnetism={false}
+                        clickEffect
+                        spotlightRadius={400}
+                        particleCount={12}
+                        glowColor="132, 0, 255"
+                        disableAnimations={false}
+                    />
+
+                    {/* <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark, title, description},index) => (
                 <li 
                 
@@ -41,11 +51,11 @@ return (
                 </a>
             </li>
             ):null))}
-        </ul> 
+        </ul>  */}
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-)
+    )
 }
 
 export default About
