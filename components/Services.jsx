@@ -9,7 +9,7 @@ const Services = () => {
 const items = [
   {
     
-    title: "Sarah Johnson",
+    title: "Azure Cloud Services",
     subtitle: "Frontend Developer",
     handle: "@sarahjohnson",
     borderColor: "#3B82F6",
@@ -18,7 +18,7 @@ const items = [
   },
   {
     
-    title: "Mike Chen",
+    title: "AWS Cloud Solutions",
     subtitle: "Backend Engineer",
     handle: "@mikechen",
     borderColor: "#10B981",
@@ -27,7 +27,7 @@ const items = [
   },
   {
     
-    title: "Mike Chen",
+    title: "Azure AI Services",
     subtitle: "Backend Engineer",
     handle: "@mikechen",
     borderColor: "#10B981",
@@ -36,8 +36,8 @@ const items = [
   },
   {
     
-    title: "Mike Chen",
-    subtitle: "Backend Engineer",
+    title: "Frontend Development",
+    subtitle: "React, Next.js",
     handle: "@mikechen",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -45,8 +45,8 @@ const items = [
   },
   {
     
-    title: "Mike Chen",
-    subtitle: "Backend Engineer",
+    title: "Backend Development",
+    subtitle: "C#, MVC.NET",
     handle: "@mikechen",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
@@ -54,7 +54,7 @@ const items = [
   },
   {
     
-    title: "Mike Chen",
+    title: "Digital Marketing",
     subtitle: "Backend Engineer",
     handle: "@mikechen",
     borderColor: "#10B981",
