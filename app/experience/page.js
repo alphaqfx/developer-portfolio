@@ -5,8 +5,8 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
-import ColorBends from "@/components/ColorBends.jsx";
 import FloatingLines from "@/components/FloatingLines.jsx";
+import Carousel from "@/components/Carousel.jsx";
 
 
 export default function ExperiencePage() {
@@ -58,27 +58,7 @@ export default function ExperiencePage() {
           zIndex: -1,
         }}
       >
-        {/* <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
-          saturation={0}
-          hueShift={240}
-        /> */}
-        {/* <ColorBends
-          rotation={45}
-          speed={0.1}
-          colors={["#006a9fff", "#5288a7ff"]}
-          transparent
-          autoRotate={2.5}
-          scale={1.5}
-          frequency={1.9}
-          warpStrength={1}
-          mouseInfluence={0}
-          parallax={0}
-          noise={0.15}
-        /> */}
+
         <FloatingLines
           linesGradient={["#47c1f5", "#2F4BC0", "#5b47f5"]}
           animationSpeed={1}
@@ -121,7 +101,37 @@ export default function ExperiencePage() {
           ease="power3.out"
         />
       </div>
-      <Services />
+      <div className='w-full px-[12%] mt-40 scroll-mt20'>
+        <h2 className='text-center leading-tight text-5xl font-jost'>Professional Experience</h2>
+        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
+          Over the years, I've had the privilege of working with diverse organizations, contributing to impactful projects, and honing my skills in various domains. Presenting a snapshot of my professional journey.
+        </p>
+        
+        <div className='flex hidden md:grid md:block mx-auto justify-center'>
+          <Carousel
+            baseWidth={750}
+            autoplay={true}
+            autoplayDelay={5000}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          /> 
+        </div>
+
+        <div className='flex block md:hidden mx-auto justify-center'>
+          <Carousel
+            baseWidth={300}
+            autoplay={true}
+            autoplayDelay={5000}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          /> 
+        </div>
+
+
+
+      </div>
       <Footer />
     </>
   );
