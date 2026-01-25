@@ -24,12 +24,14 @@
 @media (max-width: 768px) {
   .card-swap-container {
     transform: scale(.8) translate(0%, 50%);
+    perspective: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .card-swap-container {
-    transform: scale(0.6) translate(-35%, 5%);
-    visibility: hidden;
+    transform: scale(0.7);
+    visibility: visible;
+    perspective: 200px;
   }
 }

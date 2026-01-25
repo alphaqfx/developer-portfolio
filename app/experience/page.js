@@ -120,7 +120,7 @@ export default function ExperiencePage() {
 
         <div className='flex block md:hidden mx-auto justify-center'>
           <Carousel
-            baseWidth={300}
+            baseWidth={295}
             autoplay={true}
             autoplayDelay={5000}
             pauseOnHover={true}
