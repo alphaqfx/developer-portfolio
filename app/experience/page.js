@@ -104,7 +104,7 @@ export default function ExperiencePage() {
       <div className='w-full px-[12%] mt-40 scroll-mt20'>
         <h2 className='text-center leading-tight text-5xl font-jost'>Professional Experience</h2>
         <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
-          Over the years, I've had the privilege of working with diverse organizations, contributing to impactful projects, and honing my skills in various domains. Presenting a snapshot of my professional journey.
+          Over the years, I have had the privilege of working with diverse organizations, contributing to impactful projects, and honing my skills in various domains. Presenting a snapshot of my professional journey.
         </p>
         
         <div className='flex hidden md:grid md:block mx-auto justify-center'>
