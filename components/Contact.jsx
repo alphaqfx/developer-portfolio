@@ -50,7 +50,7 @@ const Contact = () => {
         <br></br>
         <br></br>
         <button
-        type='submit' className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-transparent backdrop-blur-sm border-[0.5px] text-white rounded-full mx-auto hover:shadow-[0_0_20px_#6A097D] duration-500 cursor-pointer'>Submit Now <Image src={assets.right_arrow_white} alt='' className='w-4'/></button>
+        type='submit' className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-transparent backdrop-blur-sm border-[0.5px] text-white rounded-full mx-auto hero-new-badge-container cursor-pointer duration-500'>Submit Now <Image src={assets.right_arrow_white} alt='' className='w-4'/></button>
 
         <p className='mt-4'>{result}</p>
       </form>

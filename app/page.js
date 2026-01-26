@@ -60,7 +60,7 @@ export default function Home() {
       >
         <DarkVeil
           hueShift={-120}
-          noiseIntensity={0.1}
+          noiseIntensity={0}
           scanlineIntensity={0.05}
           speed={1.5}
           scanlineFrequency={0}
@@ -81,7 +81,7 @@ export default function Home() {
       >
         <DarkVeil
           hueShift={-120}
-          noiseIntensity={0.1}
+          noiseIntensity={0}
           scanlineIntensity={0.05}
           speed={1.5}
           scanlineFrequency={0}

@@ -40,14 +40,14 @@ const Header = () => {
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="/about" className='backdrop-blur-sm px-10 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>About Me
+            href="/about" className='hero-new-badge-container backdrop-blur-sm px-10 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>About Me
                 <Image src={assets.right_arrow_white} alt="" className='w-4'/>
             </motion.a>
             <motion.a 
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.5 }}
-            href="/Vignesh_CV.pdf" download className='backdrop-blur-sm px-10 py-3 border rounded-full border-gray-500 flex items-center text-black gap-2 bg-white'>My Resume
+            href="/Vignesh_CV.pdf" download className='hero-new-badge-container duration-500 backdrop-blur-sm px-10 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>My Resume
                 <Image src={assets.download_icon} alt="" className='w-4'/>
             </motion.a>
         </div>

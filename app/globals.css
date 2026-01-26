@@ -34,3 +34,10 @@
 * {
   font-family: 'outfit';
 }
+
+.hero-new-badge-container:hover {
+  transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+  animation-duration: 1.5s;
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff5c, 0 0 60px #ffffff35, 0 12px 40px rgba(0, 0, 0, 0)
+}
