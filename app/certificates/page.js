@@ -164,7 +164,7 @@ export default function CertificatesPage() {
           </CardSwap>
         </div>
       
-        <div className='mx-auto mt-30 md:hidden'>
+<div className='mx-auto md:hidden w-full max-w-sm flex justify-center'>
           <CardSwap
             cardDistance={60}
             verticalDistance={55}
