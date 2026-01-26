@@ -101,7 +101,7 @@ export default function CertificatesPage() {
         />
       </div>
 
-      <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row gap-10 items-center mt-40 lg:mt-50 '>
+      <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row md:gap-10 items-center mt-40 lg:mt-50 '>
         <div className='w-full'>
           <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
           <div className='w-full my-8 md:my-10'>
@@ -164,7 +164,7 @@ export default function CertificatesPage() {
           </CardSwap>
         </div>
       
-<div className='mx-auto md:hidden w-full max-w-sm flex justify-center'>
+<div className='mx-auto md:hidden w-full max-w-xl flex justify-center'>
           <CardSwap
             cardDistance={60}
             verticalDistance={55}
@@ -205,7 +205,7 @@ export default function CertificatesPage() {
           </CardSwap>
         </div>
 
-        <div className="md:hidden mt-35" style={{ zIndex: -1 }}>
+        <div className="md:hidden" style={{ zIndex: -1 }}>
               <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
               <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
                 {toolsData.map(({ tool, link }, index) => (tool ? (
