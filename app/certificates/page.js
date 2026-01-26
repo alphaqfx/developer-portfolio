@@ -50,13 +50,31 @@ export default function CertificatesPage() {
 
   return (
     <>
-      <div
+      <div className="hidden md:block"
         style={{
           position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
+          zIndex: -1,
+        }}
+      >
+        <Silk
+          speed={4.2}
+          scale={1}
+          color="#007d53ff"
+          noiseIntensity={1}
+          rotation={0}
+        />
+      </div>
+      <div className="md:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "1080px",
+          height: "1080px",
           zIndex: -1,
         }}
       >
@@ -110,16 +128,16 @@ export default function CertificatesPage() {
                 I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
               </h4>
               <div className="hidden md:block ">
-              <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
-              <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
-                {toolsData.map(({ tool, link }, index) => (tool ? (
-                  <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
-                    </a>
-                  </li>
-                ) : null))}
-              </ul>
+                <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
+                <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
+                  {toolsData.map(({ tool, link }, index) => (tool ? (
+                    <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
+                      </a>
+                    </li>
+                  ) : null))}
+                </ul>
               </div>
             </div>
           </div>
@@ -163,8 +181,8 @@ export default function CertificatesPage() {
             </Card>
           </CardSwap>
         </div>
-      
-<div className='mx-auto md:hidden w-full max-w-xl flex justify-center'>
+
+        <div className='mx-auto md:hidden w-full max-w-xl flex justify-center '>
           <CardSwap
             cardDistance={60}
             verticalDistance={55}
@@ -206,17 +224,17 @@ export default function CertificatesPage() {
         </div>
 
         <div className="md:hidden" style={{ zIndex: -1 }}>
-              <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
-              <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
-                {toolsData.map(({ tool, link }, index) => (tool ? (
-                  <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
-                    </a>
-                  </li>
-                ) : null))}
-              </ul>
-              </div>
+          <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
+          <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
+            {toolsData.map(({ tool, link }, index) => (tool ? (
+              <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
+                </a>
+              </li>
+            ) : null))}
+          </ul>
+        </div>
 
       </div>
       <Footer />

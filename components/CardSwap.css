@@ -30,8 +30,8 @@
 
 @media (max-width: 480px) {
   .card-swap-container {
-    transform: scale(0.55);
+    transform: scale(0.58);
     visibility: visible;
-    perspective: 200px;
+    perspective: 100px;
   }
 }

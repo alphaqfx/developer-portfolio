@@ -12,7 +12,7 @@ export default function Home() {
 
   const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
-  
+
   const navbarItems = [
     {
       label: "Explore",
@@ -25,7 +25,7 @@ export default function Home() {
       ]
     },
     {
-      label: "Portfolio", 
+      label: "Portfolio",
       bgColor: "#14001cff",
       textColor: "#fff",
       links: [
@@ -36,7 +36,7 @@ export default function Home() {
     },
     {
       label: "Connect",
-      bgColor: "#14001cff", 
+      bgColor: "#14001cff",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email", href: "/contact" },
@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <div
+      <div className="hidden md:block"
         style={{
           position: "fixed",
           top: 0,
@@ -59,22 +59,36 @@ export default function Home() {
         }}
       >
         <DarkVeil
-    hueShift={-120}
-    noiseIntensity={0.1}
-    scanlineIntensity={0.05}
-    speed={1.5}
-    scanlineFrequency={0}
-    warpAmount={0}
-    resolutionScale={1.5}
-  />
-        {/* <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
-          saturation={0}
-          hueShift={240}
-        /> */}
+          hueShift={-120}
+          noiseIntensity={0.1}
+          scanlineIntensity={0.05}
+          speed={1.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+          resolutionScale={1.5}
+        />
+     
+      </div>
+      <div className="md:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "1080px",
+          height: "1080px",
+          zIndex: -1,
+        }}
+      >
+        <DarkVeil
+          hueShift={-120}
+          noiseIntensity={0.1}
+          scanlineIntensity={0.05}
+          speed={1.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+          resolutionScale={1}
+        />
+        
       </div>
       <GradualBlur
         target="page"
@@ -109,7 +123,6 @@ export default function Home() {
         />
       </div>
       <Header />
-      {/* <Footer /> */}
     </>
   );
 }
