@@ -10,56 +10,50 @@ const items = [
   {
     
     title: "Azure Cloud Services",
-    subtitle: "Frontend Developer",
+    subtitle: "DevOps, Infrastructure",
     handle: "@sarahjohnson",
     borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/sarahjohnson"
+    gradient: "linear-gradient(145deg, #3ba5f6ff, #091158ff)",
   },
   {
     
     title: "AWS Cloud Solutions",
-    subtitle: "Backend Engineer",
+    subtitle: "Compute, Storage",
     handle: "@mikechen",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    borderColor: "#f49529ff",
+    gradient: "linear-gradient(180deg, #db8a27ff, #8d3f00ff)",
   },
   {
     
-    title: "Azure AI Services",
-    subtitle: "Backend Engineer",
+    title: "Azure OpenAI Services",
+    subtitle: "Apps, AI Integration",
     handle: "@mikechen",
     borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    gradient: "linear-gradient(180deg, #10B981, #035235ff)",
   },
   {
     
     title: "Frontend Development",
     subtitle: "React, Next.js",
     handle: "@mikechen",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    borderColor: "#ddb41dff",
+    gradient: "linear-gradient(180deg, #f6e445ff, #7e5904ff)",
   },
   {
     
     title: "Backend Development",
     subtitle: "C#, MVC.NET",
     handle: "@mikechen",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    borderColor: "#bf66f3ff",
+    gradient: "linear-gradient(180deg, #9649e8ff, #4b089cff)",
   },
   {
     
     title: "Digital Marketing",
     subtitle: "Backend Engineer",
     handle: "@mikechen",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    borderColor: "#fd3b65ff",
+    gradient: "linear-gradient(180deg, #ef3434ff, #51002eff)",
   }
 ];
   return (
