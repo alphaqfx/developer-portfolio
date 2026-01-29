@@ -7,6 +7,7 @@ import { assets } from "@/assets/assets";
 import Silk from "@/components/Silk";
 import CardSwap, { Card } from "@/components/CardSwap.jsx";
 import { toolsData } from "@/assets/assets";
+import { motion } from "framer-motion";
 
 
 
@@ -120,7 +121,7 @@ export default function CertificatesPage() {
       </div>
 
       <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row md:gap-10 items-center mt-40 lg:mt-50 '>
-        <div className='w-full'>
+        <div className='w-full px-2 md:px-0 '>
           <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
           <div className='w-full my-8 md:my-10'>
             <div className='text-left'>
@@ -138,6 +139,16 @@ export default function CertificatesPage() {
                     </li>
                   ) : null))}
                 </ul>
+                <div className='hidden md:flex flex-col sm:flex-row justify-left ml-20 items-center gap-6 mt-15'>
+                                
+                                <motion.a
+                                    initial={{ opacity: 1 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.6, delay: 1.5 }}
+                                    href="/expertise" className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>Applied Skills
+                                    <Image src={assets.right_arrow_bold_dark} alt="" className='w-4' />
+                                </motion.a>
+                            </div>
               </div>
             </div>
           </div>
@@ -223,7 +234,7 @@ export default function CertificatesPage() {
           </CardSwap>
         </div>
 
-        <div className="md:hidden" style={{ zIndex: -1 }}>
+        <div className="md:hidden mt-[-100]" style={{ zIndex: -1 }}>
           <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
           <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
             {toolsData.map(({ tool, link }, index) => (tool ? (
@@ -235,6 +246,16 @@ export default function CertificatesPage() {
             ) : null))}
           </ul>
         </div>
+        <div className='md:hidden flex flex-col sm:flex-row justify-center items-center gap-6 mt-15'>
+                
+                <motion.a
+                    initial={{ opacity: 1 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.5 }}
+                    href="/expertise" className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>Applied Skills
+                    <Image src={assets.right_arrow_bold_dark} alt="" className='w-4' />
+                </motion.a>
+            </div>
 
       </div>
       <Footer />

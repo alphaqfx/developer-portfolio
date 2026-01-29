@@ -1,7 +1,7 @@
 .card-swap-container {
   position: relative;
   
-  transform: translate(3%, 15%);
+  transform: translate(3%, 5%);
 
   perspective: 900px;
   overflow: visible;
@@ -23,14 +23,15 @@
 
 @media (max-width: 768px) {
   .card-swap-container {
-    transform: scale(.8) translate(0%, 50%);
+    transform: scale(.8) translate(0%, 0%);
     perspective: 200px;
+    visibility: visible;
   }
 }
 
 @media (max-width: 480px) {
   .card-swap-container {
-    transform: scale(0.58);
+    transform: scale(0.585) translate(0%, -25%);
     visibility: visible;
     perspective: 100px;
   }

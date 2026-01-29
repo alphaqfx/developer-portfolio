@@ -4,6 +4,7 @@ import Image from 'next/image'
 import ElectricBorder from './ElectricBorder'
 import { info } from 'autoprefixer'
 import MagicBento from './MagicBento'
+import { motion } from 'framer-motion'
 
 const About = ({ }) => {
     return (
@@ -17,7 +18,7 @@ const About = ({ }) => {
                     <MagicBento
                         textAutoHide={true}
                         enableStars
-                        enableSpotlight
+                        enableSpotlight={false}
                         enableBorderGlow={true}
                         enableTilt={false}
                         enableMagnetism={false}
@@ -28,31 +29,25 @@ const About = ({ }) => {
                         disableAnimations={false}
                     />
 
-                    {/* <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-            {infoList.map(({icon, iconDark, title, description},index) => (
-                <li 
-                
-                 key={index}>
-                    <ElectricBorder className='backdrop-blur-sm border-[0.5px]  rounded-xl p-6 hover:bg-[var(--color-dark-hover)] hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)] text-left'>
-                        <Image src={iconDark} alt={title} className='w-7 flex items-center justify-center'/>
-                        <h3 className='my-4 font-semibold text-white'>{title}</h3>
-                        <p className='text-gray-600 text-white'>{description}</p>
-                    </ElectricBorder>
-                </li>
-            ))}
-        </ul>
 
-        <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
-        <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
-            {toolsData.map(({tool, link},index) => (tool ? (
-            <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                    <Image src={tool} alt="Tool" className='w-5 sm:w-7'/>
-                </a>
-            </li>
-            ):null))}
-        </ul>  */}
                 </div>
+
+            </div>
+            <div className='flex flex-col sm:flex-row justify-center items-center gap-6 mt-15'>
+                <motion.a
+                    initial={{ opacity: 1 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    href="/certificates" className='hero-new-badge-container backdrop-blur-sm px-12 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>Certificates
+                    <Image src={assets.right_arrow_white} alt="" className='w-4' />
+                </motion.a>
+                <motion.a
+                    initial={{ opacity: 1 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.5 }}
+                    href="/experience" className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>Experience
+                    <Image src={assets.right_arrow_bold_dark} alt="" className='w-4' />
+                </motion.a>
             </div>
         </div>
     )
