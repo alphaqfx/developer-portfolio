@@ -10,37 +10,37 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Analytics',
     description: 'Track user behavior',
     label: 'Insights'
   },
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Dashboard',
     description: 'Centralized data view',
     label: 'Overview'
   },
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Collaboration',
     description: 'Work together seamlessly',
     label: 'Teamwork'
   },
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Automation',
     description: 'Streamline workflows',
     label: 'Efficiency'
   },
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Integration',
     description: 'Connect favorite tools',
     label: 'Connectivity'
   },
   {
-    color: '#060010',
+    color: '#33007030',
     title: 'Security',
     description: 'Enterprise-grade protection',
     label: 'Protection'
@@ -481,7 +481,7 @@ const MagicBento = ({
   particleCount = DEFAULT_PARTICLE_COUNT,
   enableTilt = false,
   glowColor = DEFAULT_GLOW_COLOR,
-  clickEffect = true,
+  clickEffect = false,
   enableMagnetism = true
 }) => {
   const gridRef = useRef(null);

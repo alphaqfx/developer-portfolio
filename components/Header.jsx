@@ -35,7 +35,7 @@ const Header = () => {
         className='text-white max-w-2xl mx-auto font-jost'>
             Crafting seamless web experiences with expertise in React, Next.js, .NET, and more. Let's build something amazing together!
         </motion.p>
-        <div className='flex flex-col sm:flex-row items-center gap-6 mt-4'>
+        <div className='flex flex-col sm:flex-row items-center gap-6 mt-6'>
             <motion.a 
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
