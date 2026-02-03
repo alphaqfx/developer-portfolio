@@ -5,12 +5,8 @@ import CardNav from "@/components/CardNav.jsx";
 import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
-import TiltedCard from "@/components/TiltedCard.jsx";
-
 
 export default function AboutPage() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
   const navbarItems = [
     {
@@ -47,7 +43,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <div
+      <div id="galaxy"
         style={{
           position: "fixed",
           top: 0,
@@ -66,6 +62,7 @@ export default function AboutPage() {
           hueShift={240}
         />
       </div>
+      <div id="gradual-blur">
       <GradualBlur
         target="page"
         position="top"
@@ -76,7 +73,8 @@ export default function AboutPage() {
         exponential={true}
         opacity={1}
       />
-      <div
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,
@@ -98,9 +96,7 @@ export default function AboutPage() {
         />
       </div>
       <About />
-      
       <Footer />
-
     </>
   );
 }

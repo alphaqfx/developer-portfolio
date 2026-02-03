@@ -1,7 +1,6 @@
 import React from 'react'
-import { assets, infoList, toolsData } from '@/assets/assets'
+import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import ElectricBorder from './ElectricBorder'
 import MagicBento from './MagicBento'
 import { motion } from 'framer-motion'
 import TiltedCard from './TiltedCard.jsx'
@@ -11,44 +10,41 @@ const About = ({ }) => {
         <div id='about' className='w-full max-w-7xl mx-auto px-6 py-10 mt-30 lg:mt-40 scroll-mt20'>
             <h2 className='text-center text-5xl font-jost'>About Me</h2>
             <div className='flex w-full flex-col lg:flex-row items-start gap-12 my-20'>
-                <div className='md:hidden w-65 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
+                <div id='profile-mobile' className='md:hidden w-65 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
                     <Image src={assets.user_image} alt="" className='w-full rounded-3xl' />
                     <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
-                            Vignesh Uthiravelu
-                        </p>              
+                        Vignesh Uthiravelu
+                    </p>
                 </div>
-                
-                <div className='hidden md:flex mx-auto mt-5'>
-                <TiltedCard
-                    imageSrc="https://vignesh-uthiravelu.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser-image.6384f67d.png&w=1920&q=75"
-                    altText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
-                    captionText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
-                    containerHeight="400px"
-                    containerWidth="300px"
-                    imageHeight="400px"
-                    imageWidth="300px"
-                    rotateAmplitude={5}
-                    scaleOnHover={1.0}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={true}
-                    overlayContent={
-                        <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
-                            Vignesh Uthiravelu
-                        </p>
-                    }
-                />
-                
-                </div>
-                
+                <div id='profile-desktop' className='hidden md:flex mx-auto mt-5'>
+                    <TiltedCard
+                        imageSrc="https://vignesh-uthiravelu.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser-image.6384f67d.png&w=1920&q=75"
+                        altText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
+                        captionText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
+                        containerHeight="400px"
+                        containerWidth="300px"
+                        imageHeight="400px"
+                        imageWidth="300px"
+                        rotateAmplitude={5}
+                        scaleOnHover={1.05}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={true}
+                        overlayContent={
+                            <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
+                                Vignesh Uthiravelu
+                            </p>
+                        }
+                    />
 
-                <div className='flex-1 mx-auto justify-center '>
+                </div>
+                <div id='bento-grid' className='flex-1 mx-auto justify-center '>
                     <MagicBento
                         textAutoHide={true}
                         enableStars={false}
                         enableSpotlight={false}
                         enableBorderGlow={false}
-                        enableTilt={true}
+                        enableTilt={false}
                         enableMagnetism={false}
                         clickEffect={false}
                         spotlightRadius={400}
@@ -59,8 +55,8 @@ const About = ({ }) => {
 
 
                 </div>
-
             </div>
+
             <div className='flex flex-col sm:flex-row justify-center items-center gap-6 mt-15'>
                 <motion.a
                     initial={{ opacity: 1 }}

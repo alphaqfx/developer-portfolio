@@ -2,15 +2,12 @@
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
-import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 import Beams from "@/components/Beams.jsx";
 
 
 export default function ContactPage() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
   const navbarItems = [
     {
@@ -47,7 +44,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div
+      <div id="beams"
         style={{
           position: "fixed",
           top: 0,
@@ -76,6 +73,7 @@ export default function ContactPage() {
           hueShift={240}
         /> */}
       </div>
+      <div id="gradual-blur">
       <GradualBlur
         target="page"
         position="top"
@@ -86,7 +84,8 @@ export default function ContactPage() {
         exponential={true}
         opacity={1}
       />
-      <div
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,

@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  border: #455eaa 1px solid;
   padding: 16px;
   --outer-r: 24px;
   --p-distance: 12px;
@@ -19,13 +18,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid #455eaa;
+  border: 1px solid #659bff;
   border-radius: calc(var(--outer-r) - var(--p-distance));
   background-color: #010d3a76;
   overflow: hidden;
   cursor: grab;
   
 }
+
+
 
 .carousel-item:active {
   cursor: grabbing;
@@ -103,6 +104,13 @@
 .carousel-item-description {
   font-size: 14px;
   color: #fff;
+}
+
+.carousel-item-company {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .carousel-indicators-container {

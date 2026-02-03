@@ -1,17 +1,12 @@
 'use client'
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
-import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 import DarkVeil from "@/components/DarkVeil.jsx";
 
 
 export default function Home() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
-
 
   const navbarItems = [
     {
@@ -48,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="hidden md:block"
+      <div id="dark-veil-desktop" className="hidden md:block"
         style={{
           position: "fixed",
           top: 0,
@@ -69,7 +64,7 @@ export default function Home() {
         />
      
       </div>
-      <div className="md:hidden"
+      <div id="dark-veil-mobile" className="md:hidden"
         style={{
           position: "fixed",
           top: 0,
@@ -90,6 +85,7 @@ export default function Home() {
         />
         
       </div>
+      <div id="grad-blur">
       <GradualBlur
         target="page"
         position="top"
@@ -100,7 +96,8 @@ export default function Home() {
         exponential={true}
         opacity={1}
       />
-      <div
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,

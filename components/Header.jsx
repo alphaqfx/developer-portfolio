@@ -33,21 +33,21 @@ const Header = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className='text-white max-w-2xl mx-auto font-jost'>
-            Crafting seamless web experiences with expertise in React, Next.js, .NET, and more. Let's build something amazing together!
+            Passionate about leveraging cutting-edge AI technologies to build innovative solutions that drive efficiency and transform businesses.
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-6 mt-6'>
             <motion.a 
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="/about" className='hero-new-badge-container backdrop-blur-sm px-15 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>About Me
+            href="/about" className='hero-new-badge-container backdrop-blur-sm px-12 py-3 border rounded-full bg-blur text-white border-white-500 flex items-center gap-2 duration-500'>About Me
                 <Image src={assets.right_arrow_white} alt="" className='w-4'/>
             </motion.a>
             <motion.a 
             initial={{ opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.5 }}
-            href="/Vignesh_CV.pdf" download className='hero-new-badge-container duration-500 backdrop-blur-sm px-15 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>My Resume
+            href="/Vignesh_CV.pdf" download className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>My Resume
                 <Image src={assets.download_icon} alt="" className='w-4'/>
             </motion.a>
         </div>

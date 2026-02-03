@@ -2,6 +2,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import './ChromaGrid.css';
+import { assets } from '@/assets/assets';
 
 export const ChromaGrid = ({
   items,

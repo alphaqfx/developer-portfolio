@@ -1,16 +1,13 @@
 'use client'
-import Services from "@/components/Services";
+import Expertise from "@/components/Expertise";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
-import Galaxy from "@/components/Galaxy.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 import DotGrid from "@/components/DotGrid.jsx";
 
 
 export default function ExpertisePage() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
 
   const navbarItems = [
     {
@@ -47,7 +44,7 @@ export default function ExpertisePage() {
 
   return (
     <>
-      <div
+      <div id="dotgrid"
         style={{
           position: "fixed",
           top: 0,
@@ -57,14 +54,6 @@ export default function ExpertisePage() {
           zIndex: -1,
         }}
       >
-        {/* <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
-          saturation={0}
-          hueShift={240}
-        /> */}
         <DotGrid
           dotSize={5}
           gap={20}
@@ -79,6 +68,7 @@ export default function ExpertisePage() {
           returnDuration={1.5}
         />
       </div>
+      <div id="gradual-blur">
       <GradualBlur
         target="page"
         position="top"
@@ -89,7 +79,8 @@ export default function ExpertisePage() {
         exponential={true}
         opacity={1}
       />
-      <div
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,
@@ -110,7 +101,7 @@ export default function ExpertisePage() {
           ease="power3.out"
         />
       </div>
-      <Services />
+      <Expertise />
       <Footer />
     </>
   );

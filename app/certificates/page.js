@@ -1,20 +1,15 @@
 'use client'
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import CardNav from "@/components/CardNav.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
 import Silk from "@/components/Silk";
-import CardSwap, { Card } from "@/components/CardSwap.jsx";
-import { toolsData } from "@/assets/assets";
-import { motion } from "framer-motion";
+
+import Certificates from "@/components/Certificates";
 
 
 
 export default function CertificatesPage() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
-
 
   const navbarItems = [
     {
@@ -51,7 +46,7 @@ export default function CertificatesPage() {
 
   return (
     <>
-      <div className="hidden md:block"
+      <div id="silk-desktop" className="hidden md:block"
         style={{
           position: "fixed",
           top: 0,
@@ -69,7 +64,7 @@ export default function CertificatesPage() {
           rotation={0}
         />
       </div>
-      <div className="md:hidden"
+      <div id="silk-mobile" className="md:hidden"
         style={{
           position: "fixed",
           top: 0,
@@ -87,7 +82,7 @@ export default function CertificatesPage() {
           rotation={0}
         />
       </div>
-      <div >
+      <div id="gradual-blur">
         <GradualBlur
           target="page"
           position="top"
@@ -97,8 +92,9 @@ export default function CertificatesPage() {
           curve="bezier"
           exponential={true}
           opacity={1}
-        /></div>
-      <div
+        />
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,
@@ -119,145 +115,7 @@ export default function CertificatesPage() {
           ease="power3.out"
         />
       </div>
-
-      <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row md:gap-10 items-center mt-40 lg:mt-50 '>
-        <div className='w-full px-2 md:px-0 '>
-          <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
-          <div className='w-full my-8 md:my-10'>
-            <div className='text-left'>
-              <h4 className='mb-10 max-w-xl font-jost'>
-                I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
-              </h4>
-              <div className="hidden md:block ">
-                <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
-                <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
-                  {toolsData.map(({ tool, link }, index) => (tool ? (
-                    <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
-                      </a>
-                    </li>
-                  ) : null))}
-                </ul>
-                <div className='hidden md:flex flex-col sm:flex-row justify-left ml-20 items-center gap-6 mt-15'>
-                                
-                                <motion.a
-                                    initial={{ opacity: 1 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 0.6, delay: 1.5 }}
-                                    href="/expertise" className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>Applied Skills
-                                    <Image src={assets.right_arrow_bold_dark} alt="" className='w-4' />
-                                </motion.a>
-                            </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='w-full hidden md:block'>
-          <CardSwap
-            cardDistance={60}
-            verticalDistance={55}
-            delay={5000}
-            pauseOnHover={true}
-          >
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.ai_104} alt="azure" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.aws} alt="aws" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.google} alt="google" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.copilot} alt="copilot" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.ibm} alt="ibm" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.sitecore} alt="sitecore" />
-              </div>
-            </Card>
-          </CardSwap>
-        </div>
-
-        <div className='mx-auto md:hidden w-full max-w-xl flex justify-center '>
-          <CardSwap
-            cardDistance={60}
-            verticalDistance={55}
-            delay={5000}
-            pauseOnHover={true}
-            skewAmount={0}
-          >
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.ai_104} alt="azure" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.aws} alt="aws" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.google} alt="google" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.copilot} alt="copilot" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.ibm} alt="ibm" />
-              </div>
-            </Card>
-            <Card>
-              <div className="py-5" >
-                <Image src={assets.sitecore} alt="sitecore" />
-              </div>
-            </Card>
-          </CardSwap>
-        </div>
-
-        <div className="md:hidden mt-[-100]" style={{ zIndex: -1 }}>
-          <h4 className='text-lg my-6 text-white font-jost'>Tools I use</h4>
-          <ul className='flex items-center gap-3 sm:gap-5 justify-start'>
-            {toolsData.map(({ tool, link }, index) => (tool ? (
-              <li className='backdrop-blur-sm flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[var(--shadow-white)]' key={index}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  <Image src={tool} alt="Tool" className='w-5 sm:w-7' />
-                </a>
-              </li>
-            ) : null))}
-          </ul>
-        </div>
-        <div className='md:hidden flex flex-col sm:flex-row justify-center items-center gap-6 mt-15'>
-                
-                <motion.a
-                    initial={{ opacity: 1 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.5 }}
-                    href="/expertise" className='hero-new-badge-container duration-500 backdrop-blur-sm px-12 py-3 border rounded-full border-white flex items-center text-black gap-2 bg-white'>Applied Skills
-                    <Image src={assets.right_arrow_bold_dark} alt="" className='w-4' />
-                </motion.a>
-            </div>
-
-      </div>
+      <Certificates />
       <Footer />
     </>
   );

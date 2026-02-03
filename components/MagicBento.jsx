@@ -10,40 +10,46 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    color: '#33007030',
+    color: '#006aff10',
     title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    description: ['Track user behavior', 'Real-time insights', 'Custom reports'],
+    label: 'Insights',
+    url: '/'
   },
   {
-    color: '#33007030',
+    color: '#2bff0010',
     title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview'
+    description: ['Centralized data view', 'Interactive widgets', 'Live updates'],
+    label: 'Overview',
+    url: '/'
   },
   {
-    color: '#33007030',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
+    color: '#8c00ff10',
+    title: 'Education',
+    description: ['Work together seamlessly', 'Share knowledge', 'Learn faster'],
+    label: 'Teamwork',
+    url: '/'
   },
   {
-    color: '#33007030',
+    color: '#ffbb0010',
     title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
+    description: ['Streamline workflows', 'Save time', 'Reduce errors'],
+    label: 'Efficiency',
+    url: '/'
   },
   {
-    color: '#33007030',
+    color: '#00b3ff10',
     title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
+    description: ['Connect favorite tools', 'Sync data seamlessly', 'Build workflows'],
+    label: 'Connectivity',
+    url: '/'
   },
   {
-    color: '#33007030',
+    color: '#ff000010',
     title: 'Security',
-    description: 'Enterprise-grade protection',
-    label: 'Protection'
+    description: ['Enterprise-grade protection', 'Data encryption', 'Compliance ready'],
+    label: 'Protection',
+    url: '/'
   }
 ];
 
@@ -512,6 +518,26 @@ const MagicBento = ({
           };
 
           if (enableStars) {
+            const cardContent = (
+              <>
+                <div className="magic-bento-card__header">
+                  <div className="magic-bento-card__label">{card.label}</div>
+                </div>
+                <div className="magic-bento-card__content">
+                  <h2 className="magic-bento-card__title">{card.title}</h2>
+                  {Array.isArray(card.description) ? (
+                    <ul className="magic-bento-card__description-list">
+                      {card.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="magic-bento-card__description">{card.description}</p>
+                  )}
+                </div>
+              </>
+            );
+
             return (
               <ParticleCard
                 key={index}
@@ -522,14 +548,16 @@ const MagicBento = ({
                 enableTilt={enableTilt}
                 clickEffect={clickEffect}
                 enableMagnetism={enableMagnetism}
+                onClick={() => card.url && (window.location.href = card.url)}
+                style={{ ...cardProps.style, cursor: card.url ? 'pointer' : 'default' }}
               >
-                <div className="magic-bento-card__header">
-                  <div className="magic-bento-card__label">{card.label}</div>
-                </div>
-                <div className="magic-bento-card__content">
-                  <h2 className="magic-bento-card__title">{card.title}</h2>
-                  <p className="magic-bento-card__description">{card.description}</p>
-                </div>
+                {card.url ? (
+                  <a href={card.url} className="magic-bento-card__link">
+                    {cardContent}
+                  </a>
+                ) : (
+                  cardContent
+                )}
               </ParticleCard>
             );
           }
@@ -538,6 +566,7 @@ const MagicBento = ({
             <div
               key={index}
               {...cardProps}
+              style={{ ...cardProps.style, cursor: card.url ? 'pointer' : 'default' }}
               ref={el => {
                 if (!el) return;
 
@@ -597,6 +626,11 @@ const MagicBento = ({
                 };
 
                 const handleClick = e => {
+                  if (card.url) {
+                    window.location.href = card.url;
+                    return;
+                  }
+
                   if (!clickEffect || shouldDisableAnimations) return;
 
                   const rect = el.getBoundingClientRect();
@@ -651,7 +685,15 @@ const MagicBento = ({
               </div>
               <div className="magic-bento-card__content">
                 <h2 className="magic-bento-card__title">{card.title}</h2>
-                <p className="magic-bento-card__description">{card.description}</p>
+                {Array.isArray(card.description) ? (
+                  <ul className="magic-bento-card__description-list">
+                    {card.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="magic-bento-card__description">{card.description}</p>
+                )}
               </div>
             </div>
           );

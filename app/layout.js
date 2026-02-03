@@ -1,6 +1,6 @@
 import { Outfit, Jost, Strait, Lexend, Figtree } from "next/font/google";
 import "./globals.css";
-import Particles from "@/components/Particles";
+
 const outfit = Outfit({
   subsets: ["latin"], weight: ["400","500","600", "700"]
 });

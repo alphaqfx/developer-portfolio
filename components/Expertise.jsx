@@ -3,8 +3,9 @@ import React from 'react'
 import Image from 'next/image'
 import ChromaGrid from './ChromaGrid.jsx'
 import { motion } from 'framer-motion'
+import { im } from 'mathjs'
 
-const Services = () => {
+const Expertise = () => {
 
 
   const items = [
@@ -12,6 +13,7 @@ const Services = () => {
 
       title: "Azure Cloud Services",
       subtitle: "DevOps, Infrastructure",
+      image: 'https://imgs.search.brave.com/rw1httCArwkxZT82n0YhweP2yg3Qr-GLItKczIYTcvw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvbWlj/cm9zb2Z0LWF6dXJl/LTItbG9nby1ibGFj/ay1hbmQtd2hpdGUu/cG5n',
       handle: "@sarahjohnson",
       borderColor: "#428bffff",
       gradient: "linear-gradient(145deg, #3ba5f6ff, #1827b1ff)",
@@ -59,10 +61,9 @@ const Services = () => {
   ];
   return (
     <div className='w-full px-[12%] mt-40 scroll-mt20'>
-      <h4 className='text-center mb-2 text-xl font-jost'>What I Offer</h4>
-      <h2 className='text-center text-5xl font-jost'>My Expertise</h2>
+      <h2 className='text-center text-5xl font-jost'>What I Offer</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
-        I offer a wide range of end to end Branding services to help you reach to the target audience and achieve your marketing goals with effective strategies and creative solutions.
+        My expertise spans across major cloud platforms and modern web technologies, ensuring robust and scalable solutions tailored to your business needs.
       </p>
       <div className='flex-1 mx-auto justify-center'>
         <ChromaGrid
@@ -95,4 +96,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Expertise

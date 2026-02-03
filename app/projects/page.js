@@ -2,39 +2,9 @@
 import CardNav from "@/components/CardNav.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
 import { assets } from "@/assets/assets";
-import InfiniteMenu from "@/components/InfiniteMenu.jsx";
-
+import Projects from "@/components/Projects.jsx";
 
 export default function ProjectsPage() {
-
-  const normalize = v => (v && typeof v === 'object' && 'src' in v) ? v.src : v;
-
-  const items = [
-    {
-      image: 'https://picsum.photos/300/300?',
-      link: 'https://google.com/',
-      title: 'Item 1',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/400/400?',
-      link: 'https://google.com/',
-      title: 'Item 2',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/500/500?',
-      link: 'https://google.com/',
-      title: 'Item 3',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/600/600?',
-      link: 'https://google.com/',
-      title: 'Item 4',
-      description: 'This is pretty cool, right?'
-    }
-  ];
 
   const navbarItems = [
     {
@@ -71,7 +41,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      
+      <div id="gradual-blur">
       <GradualBlur
         target="page"
         position="top"
@@ -82,7 +52,8 @@ export default function ProjectsPage() {
         exponential={true}
         opacity={1}
       />
-      <div
+      </div>
+      <div id="navbar"
         style={{
           position: "relative",
           top: 0,
@@ -103,51 +74,7 @@ export default function ProjectsPage() {
           ease="power3.out"
         />
       </div>
-      <div style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
-      }}>
-        {/* <DomeGallery
-          fit={1}
-          minRadius={300}
-          maxVerticalRotationDeg={0}
-          segments={21}
-          dragDampening={2}
-          grayscale={false}
-        /> */}
-        <InfiniteMenu items={items}
-          scale={0.9}
-        />
-      </div>
-
-
-
-      <div className="lg:hidden relative mt-40 items-center flex justify-center">
-        {/* subtle circular shadow */}
-        <div
-          className="
-      absolute
-      w-70 h-30
-      rounded-full
-      
-      bg-gradient-to-r from-black/90 via-black/90 to-black/90
-      blur-3xl
-    "
-        />
-
-        {/* text */}
-        <h2 className="relative text-3xl lg:text-4xl font-jost text-center">
-          My Latest Works
-        </h2>
-      </div>
-
-
-
-          
+      <Projects  />
     </>
   );
 }

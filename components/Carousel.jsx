@@ -8,23 +8,38 @@ import './Carousel.css';
 
 const DEFAULT_ITEMS = [
   {
-    title: 'Packaged App Development Associate',
-    description: 'Accenture Solutions Pvt Ltd - Worked on developing web applications using React and .NET technologies.',
+    title: 'App Development Associate',
+    description: [
+      'Worked on developing large scale enterprise level Web Applications used by millions across the globe.',
+      'Responsible for code quality, performance optimization, and implementing new features.',
+      'Cloud Deployments and DevOps infrastructure management on AWS and Azure environments.'
+    ],
     id: 1,
+    company: 'Accenture Solutions Pvt. Ltd. (Apr. 2024 - Dec. 2025), Chennai',
     icon: <FiCode className="carousel-icon" />
   },
   {
-    title: 'Technical Support Associate',
-    description: 'Sutherland Global Services - Provided technical support and troubleshooting for a major E-commerce platform.',
+    title: 'Digital Marketing Specialist',
+    description: [
+      'Developed and implemented digital marketing strategies to enhance online presence and drive traffic.',
+      'SEO, SEM, and Social Media Marketing (SMM) to increase brand awareness and engagement.',
+      'Content creation and analytics reporting to measure campaign ROI and optimize performance.'
+    ],
     id: 2,
-    icon: <FiCircle className="carousel-icon" />
+    company: 'Freelance Professional Service (Nov. 2023 - Apr. 2024), Remote',
+    icon: <FiLayout className="carousel-icon" />
   },
   {
-    title: 'Digital Marketing Specialist',
-    description: 'Freelance - Managed digital marketing campaigns and social media presence for small businesses.',
+    title: 'Technical Support Associate',
+    description: [
+      'Provided technical support and On-Call troubleshooting for a major E-commerce and Payments platform.',
+      'Resolved customer issues related to payments, transactions, orders, logistics and account management.',
+      'Collaborated with cross-functional teams to ensure timely resolution and assistance for critical incidents.'
+    ],
     id: 3,
-    icon: <FiLayers className="carousel-icon" />
-  },
+    company: 'Sutherland Global Services (May 2023 - Oct. 2023), Chennai',
+    icon: <FiCircle className="carousel-icon" />
+  }
   
 ];
 
@@ -50,12 +65,21 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       }}
       transition={transition}
     >
-      <div className={`carousel-item-header ${round ? 'round' : ''}`}>
-        <span className="carousel-icon-container">{item.icon}</span>
-      </div>
+      
       <div className="carousel-item-content">
         <div className="carousel-item-title">{item.title}</div>
-        <p className="carousel-item-description">{item.description}</p>
+        <div className="carousel-item-company">{item.company}</div>
+        <div className="carousel-item-description">
+          {Array.isArray(item.description) ? (
+            <ul>
+              {item.description.map((point, idx) => (
+                <li key={idx}>▸ {point}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{item.description}</p>
+          )}
+        </div>
       </div>
     </motion.div>
   );
