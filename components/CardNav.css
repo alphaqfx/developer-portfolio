@@ -159,6 +159,21 @@
   opacity: 0.75;
 }
 
+.nav-card-link-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.nav-card-link-custom-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .card-nav-container {
     width: 90%;

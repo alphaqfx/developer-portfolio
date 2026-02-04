@@ -244,7 +244,13 @@ const CardNav = ({
                     aria-label={lnk.ariaLabel}
                     style={{ cursor: 'pointer' }}
                   >
-                    <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
+                    {lnk.icon ? (
+                      <span className="nav-card-link-custom-icon" aria-hidden="true">
+                        {lnk.icon}
+                      </span>
+                    ) : (
+                      <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
+                    )}
                     {lnk.label}
                   </div>
                 ))}

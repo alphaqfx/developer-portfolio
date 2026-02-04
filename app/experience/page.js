@@ -1,47 +1,13 @@
 'use client'
 import Footer from "@/components/Footer";
-import CardNav from "@/components/CardNav.jsx";
 import GradualBlur from "@/components/GradualBlur.jsx";
-import { assets } from "@/assets/assets";
 import FloatingLines from "@/components/FloatingLines.jsx";
 import Experience from "@/components/Experience.jsx";
+import Navbar from "@/components/Navbar";
 
 
 
 export default function ExperiencePage() {
-
-  const navbarItems = [
-    {
-      label: "Explore",
-      bgColor: "#14001cff",
-      textColor: "#fff",
-      links: [
-        { label: "Home", ariaLabel: "Go to Home", href: "/" },
-        { label: "About Me", ariaLabel: "Go to About", href: "/about" },
-        { label: "Expertise", ariaLabel: "Go to Expertise", href: "/expertise" }
-      ]
-    },
-    {
-      label: "Portfolio",
-      bgColor: "#14001cff",
-      textColor: "#fff",
-      links: [
-        { label: "Projects", ariaLabel: "Go to Projects", href: "/projects" },
-        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/certificates" },
-        { label: "Experience", ariaLabel: "Go to Experience", href: "/experience" }
-      ]
-    },
-    {
-      label: "Connect",
-      bgColor: "#14001cff",
-      textColor: "#fff",
-      links: [
-        { label: "Email", ariaLabel: "Email", href: "/contact" },
-        { label: "Instagram", ariaLabel: "Instagram", href: "#", target: "_blank" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer" }
-      ]
-    }
-  ];
 
   return (
     <>
@@ -78,29 +44,9 @@ export default function ExperiencePage() {
         opacity={1}
       />
       </div>
-      <div id="navbar"
-        style={{
-          position: "relative",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 90,
-        }}
-      >
-        <CardNav
-          logo={assets.logo}
-          logoAlt="Company Logo"
-          items={navbarItems}
-          baseColor="#fff"
-          menuColor="#000"
-          buttonBgColor="#111"
-          buttonTextColor="#fff"
-          ease="power3.out"
-        />
-      </div>
-      < Experience />
-      < Footer />
+      <Navbar />
+      <Experience />
+      <Footer />
     </>
   );
 }

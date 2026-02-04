@@ -33,17 +33,17 @@ const techLogos = [
 
 const Certificates = ({ }) => {
     return (
-        <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row md:gap-10 items-center mt-40 lg:mt-50 '>
+        <div className='w-full max-w-7xl mx-auto px-6 lg:px-5 md:px-15 flex flex-col lg:flex-row md:gap-15 items-center mt-40 lg:mt-45 '>
         <div className='w-full px-2 md:px-0 '>
           <h2 className='text-left text-4xl md:text-5xl font-jost leading-tight'>Professional Certifications</h2>
           <div className='w-full my-8 md:my-10'>
             <div className='text-left'>
               <h4 className='mb-10 max-w-xl font-jost'>
-                I have earned several professional certifications that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Engineering, and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
+                I have earned several in-demand skill credentials that validate my expertise in Enterprise Web App Development, AI Assisted Workflow, Cloud Solutions, Gen AI and modern technologies. These certifications demonstrate my commitment to staying updated with industry trends and best practices.
               </h4>
               <div className="hidden md:block ">
                 <h4 className='text-lg my-6 text-white font-jost font-semi-bold'>Proficient Tools & Technologies</h4>
-                <div className='w-md mt-8 flex items-center overflow-x-hidden' style={{
+                <div className='w-lg mt-8 flex items-center overflow-x-hidden' style={{
                   maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
                   WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
                 }}>
@@ -80,7 +80,7 @@ const Certificates = ({ }) => {
             cardDistance={60}
             verticalDistance={55}
             delay={5000}
-            pauseOnHover={true}
+            pauseOnHover={false}
           >
             <Card>
               <div className="py-5" >
@@ -120,7 +120,7 @@ const Certificates = ({ }) => {
             cardDistance={60}
             verticalDistance={55}
             delay={5000}
-            pauseOnHover={true}
+            pauseOnHover={false}
             skewAmount={0}
           >
             <Card>

@@ -1,50 +1,75 @@
-"use client"
-import { assets } from '@/assets/assets'
-import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
-import { motion } from 'motion/react'
+import React from "react";
+import CardNav from "@/components/CardNav.jsx";
+import { assets } from "@/assets/assets.js";
+import { BiHomeAlt } from "react-icons/bi";
+import { CgProfile, CgBriefcase } from "react-icons/cg";
+import { RiRocketLine } from "react-icons/ri";
+import { PiCertificateBold } from "react-icons/pi";
+import { GiLaurelsTrophy } from "react-icons/gi";
+import { MdOutlineMarkEmailRead  } from "react-icons/md";
+import { VscGithub } from "react-icons/vsc";
+import { FaLinkedin } from "react-icons/fa";
+
 
 const Navbar = ({}) => {
 
-  const [isScroll, setIsScroll] = useState(false);
-  const sideMenuRef = useRef();
-  const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
-  }
-  const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
-  }
+const navbarItems = [
+    {
+      label: "Explore",
+      bgColor: "#14001cff",
+      textColor: "#fff",
+      links: [
+        { label: "Home", ariaLabel: "Go to Home", href: "/", icon: <BiHomeAlt /> },
+        { label: "About Me", ariaLabel: "Go to About", href: "/about", icon: <CgProfile /> },
+        { label: "Expertise", ariaLabel: "Go to Services", href: "/expertise", icon: <GiLaurelsTrophy /> }
+      ]
+    },
+    {
+      label: "Portfolio",
+      bgColor: "#14001cff",
+      textColor: "#fff",
+      links: [
+        { label: "Projects", ariaLabel: "Go to Projects", href: "/projects", icon: <RiRocketLine /> },
+        { label: "Certificates", ariaLabel: "Go to Certificates", href: "/certificates", icon: <PiCertificateBold /> },
+        { label: "Experience", ariaLabel: "Go to Experience", href: "/experience", icon: <CgBriefcase /> }
+      ]
+    },
+    {
+      label: "Connect",
+      bgColor: "#14001cff",
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email", href: "/contact", icon: <MdOutlineMarkEmailRead /> },
+        { label: "GitHub", ariaLabel: "GitHub", href: "#", target: "_blank", icon: <VscGithub /> },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://www.linkedin.com/in/vigneshuthiravelu/", target: "_blank", rel: "noopener noreferrer", icon: <FaLinkedin /> }
+      ]
+    }
+  ];
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if(scrollY > 50) {
-        setIsScroll(true)
-      } else {
-        setIsScroll(false)
-      }
-    })
-  }, [])
   return (
     <>
-    <div className='fixed top-0 left-0 w-11/12 -z-10 translate-y-[-80%]'>
-      <Image src={assets.header_bg_color} alt="" className='w-full'/>
-    </div>
-    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/35 backdrop-blur-lg shadow-sm duration-500" : ""}`}>
-        <a href="#top">
-           <Image src={assets.logo_dark} alt="logo" className='w-32 cursor-pointer mr-14'/>
-        </a>
-        <ul className={`hidden md:flex text-black items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll? "":"backdrop-blur-lg bg-white shadow-sm bg-opacity-50 duration-500"} `}>
-            <li><a className="font-jost" href="/">Home</a></li>
-            <li><a className="font-jost" href="#about">About Me</a></li>
-            <li><a className="font-jost" href="#services">Services</a></li>
-            <li><a className="font-jost" href="#portfolio">Portfolio</a></li>
-            <li><a className="font-jost" href="#contact">Contact Me</a></li>
-        </ul>
-        
-        
-        
-        
-    </nav>
+    <div id="navbar"
+        style={{
+          position: "relative",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 90,
+        }}
+      >
+        <CardNav
+          logo={assets.logo}
+          logoAlt="Site Logo"
+          logoHref="/"
+          items={navbarItems}
+          baseColor="#fff"
+          menuColor="#000"
+          buttonBgColor="#111"
+          buttonTextColor="#fff"
+          ease="power3.out"
+        />
+      </div>
       
     </>
   )

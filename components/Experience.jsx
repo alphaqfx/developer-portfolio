@@ -14,9 +14,9 @@ const Experience = ({ }) => {
         
         <div className='flex hidden md:grid md:block mx-auto justify-center'>
           <Carousel
-            baseWidth={750}
+            baseWidth={900}
             autoplay={true}
-            autoplayDelay={5000}
+            autoplayDelay={15000}
             pauseOnHover={true}
             loop={true}
             round={false}
@@ -26,8 +26,8 @@ const Experience = ({ }) => {
         <div className='flex block md:hidden mx-auto justify-center'>
           <Carousel
             baseWidth={310}
-            autoplay={true}
-            autoplayDelay={5000}
+            autoplay={false}
+            autoplayDelay={15000}
             pauseOnHover={true}
             loop={true}
             round={false}
