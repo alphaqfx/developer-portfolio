@@ -20,7 +20,7 @@
   justify-content: space-between;
   border: 1px solid #659bff;
   border-radius: calc(var(--outer-r) - var(--p-distance));
-  background-color: #010d3a76;
+  background-color: #010d3a7c;
   overflow: hidden;
   cursor: grab;
   
@@ -108,8 +108,7 @@
 
 .carousel-item-company {
   font-size: 16px;
-  color: #ffffff;
-  font-weight: 500;
+  color: #a0ceff;
   margin-bottom: 8px;
 }
 
@@ -140,5 +139,5 @@
 }
 
 .carousel-indicator.inactive {
-  background-color: #555;
+  background-color: #3d5285;
 }

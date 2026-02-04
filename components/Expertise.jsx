@@ -1,9 +1,14 @@
-import { assets, serviceData } from '@/assets/assets'
+import { assets } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
 import ChromaGrid from './ChromaGrid.jsx'
 import { motion } from 'framer-motion'
-import { im } from 'mathjs'
+import { SiDotnet, SiOpenai} from 'react-icons/si';
+import { FaAws, FaInstagram  } from 'react-icons/fa';
+import { VscAzure } from 'react-icons/vsc';
+import { IoLogoJavascript } from "react-icons/io";
+
+
 
 const Expertise = () => {
 
@@ -12,58 +17,57 @@ const Expertise = () => {
     {
 
       title: "Azure Cloud Services",
-      subtitle: "DevOps, Infrastructure",
-      image: 'https://imgs.search.brave.com/rw1httCArwkxZT82n0YhweP2yg3Qr-GLItKczIYTcvw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvbWlj/cm9zb2Z0LWF6dXJl/LTItbG9nby1ibGFj/ay1hbmQtd2hpdGUu/cG5n',
-      handle: "@sarahjohnson",
+      subtitle: ["Infra. Management, Admin.","Compute Servers, DevOps, CI/CD", ],
+      icon: <VscAzure className="w-15 h-15" />,
       borderColor: "#428bffff",
       gradient: "linear-gradient(145deg, #3ba5f6ff, #1827b1ff)",
     },
     {
 
       title: "AWS Cloud Solutions",
-      subtitle: "Compute, Storage",
-      handle: "@mikechen",
+      subtitle: ["CDNs, Storage, App Services", "VMs, Cloud Security, Optimization"],
+      icon: <FaAws className="w-15 h-15" />,
       borderColor: "#f49529ff",
       gradient: "linear-gradient(180deg, #db8a27ff, #8d3f00ff)",
     },
     {
 
       title: "Azure OpenAI Services",
-      subtitle: "Apps, AI Integration",
-      handle: "@mikechen",
+      subtitle: ["AI Model Integration, Chatbots", "Gen AI Solutions, NLP, Agentic AI"],
+      icon: <SiOpenai className="w-15 h-15" />,
       borderColor: "#10B981",
       gradient: "linear-gradient(180deg, #10B981, #035235ff)",
     },
     {
 
       title: "Frontend Development",
-      subtitle: "React, Next.js",
-      handle: "@mikechen",
+      subtitle: ["Component Design, UX/UI, SPA", "React, Next.js, Vercel Deployment"],
+      icon: <IoLogoJavascript className="w-15 h-15" />,
       borderColor: "#ddb41dff",
       gradient: "linear-gradient(180deg, #f6e445ff, #7e5904ff)",
     },
     {
 
       title: "Backend Development",
-      subtitle: "C#, MVC.NET",
-      handle: "@mikechen",
+      subtitle: ["MVC, API Design, Microservices", "Sitecore CMS, Node.js Integration"],
+      icon: <SiDotnet className="w-15 h-15" />,
       borderColor: "#bf66f3ff",
       gradient: "linear-gradient(180deg, #9649e8ff, #4b089cff)",
     },
     {
 
       title: "Digital Marketing",
-      subtitle: "Backend Engineer",
-      handle: "@mikechen",
-      borderColor: "#fd3b65ff",
-      gradient: "linear-gradient(180deg, #ef3434ff, #51002eff)",
+      subtitle: ["SEO/SEM, Social Media Branding", "Content Marketing, Leads Gen."],
+      icon: <FaInstagram className="w-15 h-15" />,
+      borderColor: "#fd3b48ff",
+      gradient: "linear-gradient(180deg, #e44242ff, #720026ff)",
     }
   ];
   return (
     <div className='w-full px-[12%] mt-40 scroll-mt20'>
       <h2 className='text-center text-5xl font-jost'>What I Offer</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
-        My expertise spans across major cloud platforms and modern web technologies, ensuring robust and scalable solutions tailored to your business needs.
+        My expertise spans across Cloud Computing, Gen-AI integration, and Full-Stack Web Development. Delivering innovative solutions that drive business growth and operational efficiency.
       </p>
       <div className='flex-1 mx-auto justify-center'>
         <ChromaGrid

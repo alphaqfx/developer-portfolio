@@ -33,7 +33,7 @@ const Header = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className='text-white max-w-2xl mx-auto font-jost'>
-            Passionate about leveraging cutting-edge AI technologies to build innovative solutions that drive efficiency and transform businesses.
+          I specialize in building intelligent AI solutions and managing scalable cloud infrastructure to help businesses innovate, optimize and operate efficiently in the digital landscape.
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-6 mt-6'>
             <motion.a 
