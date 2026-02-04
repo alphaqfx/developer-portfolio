@@ -12,9 +12,9 @@ const Experience = ({ }) => {
           Over the years, I have had the privilege of working with diverse organizations, contributing to impactful projects, and honing my skills in various domains. Presenting a snapshot of my professional journey.
         </p>
         
-        <div className='flex hidden md:grid md:block mx-auto justify-center'>
+        <div className='hidden md:grid mx-auto justify-center items-center'>
           <Carousel
-            baseWidth={900}
+            baseWidth={800}
             autoplay={true}
             autoplayDelay={15000}
             pauseOnHover={true}
@@ -25,7 +25,7 @@ const Experience = ({ }) => {
 
         <div className='flex block md:hidden mx-auto justify-center'>
           <Carousel
-            baseWidth={310}
+            baseWidth={312}
             autoplay={false}
             autoplayDelay={15000}
             pauseOnHover={true}
