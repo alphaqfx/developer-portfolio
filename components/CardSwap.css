@@ -1,7 +1,7 @@
 .card-swap-container {
   position: relative;
   
-  transform: translate(0%, 4%);
+  transform: translate(0%, 0%);
 
   perspective: 900px;
   overflow: visible;

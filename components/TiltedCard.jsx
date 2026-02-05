@@ -2,6 +2,7 @@
 import { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 import './TiltedCard.css';
+import ElectricBorder from './ElectricBorder.jsx';
 
 const springValues = {
   damping: 30,
@@ -89,31 +90,44 @@ export default function TiltedCard({
       {showMobileWarning && (
         <div className="tilted-card-mobile-alert">This effect is not optimized for mobile. Check on desktop.</div>
       )}
-
       <motion.div
-        className="tilted-card-inner"
         style={{
-          width: imageWidth,
-          height: imageHeight,
           rotateX,
           rotateY,
           scale
         }}
       >
-        <motion.img
-          src={imageSrc}
-          alt={altText}
-          className="tilted-card-img"
-          style={{
-            width: imageWidth,
-            height: imageHeight
-          }}
-        />
+        <ElectricBorder
+          color="#ffffffff"
+          speed={0.55}
+          chaos={0.01}
+          thickness={5}
+          style={{ borderRadius: 30 }}
+        >
+          <motion.div
+            className="tilted-card-inner"
+            style={{
+              width: imageWidth,
+              height: imageHeight
+            }}
+          >
+            <motion.img
+              src={imageSrc}
+              alt={altText}
+              className="tilted-card-img"
+              style={{
+                width: imageWidth,
+                height: imageHeight
+              }}
+            />
 
-        {displayOverlayContent && overlayContent && (
-          <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
-        )}
+            {displayOverlayContent && overlayContent && (
+              <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
+            )}
+          </motion.div>
+        </ElectricBorder>
       </motion.div>
+      
 
       {showTooltip && (
         <motion.figcaption

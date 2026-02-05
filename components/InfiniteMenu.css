@@ -33,7 +33,7 @@
   position: absolute;
   font-weight: 900;
   font-size: 3rem;
-  left: 1.6em;
+  left: 2.25em;
   top: 50%;
 }
 
@@ -67,10 +67,10 @@
 .face-description {
   user-select: none;
   position: absolute;
-  max-width: 10ch;
+  max-width: 12em;
   top: 50%;
   font-size: 1.2rem;
-  right: 1%;
+  right: -3.5em;
   transform: translate(0, -50%);
 }
 

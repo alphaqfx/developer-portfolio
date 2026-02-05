@@ -11,44 +11,44 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     color: '#006aff10',
-    title: 'Analytics',
-    description: ['Track user behavior', 'Real-time insights', 'Custom reports'],
-    label: 'Insights',
+    title: 'About Me',
+    description: ['Software Developer', 'Based in India', 'Gen AI Enthusiast'],
+    label: 'Who am I ?',
     url: '/'
   },
   {
     color: '#2bff0010',
-    title: 'Dashboard',
+    title: 'My Work',
     description: ['Centralized data view', 'Interactive widgets', 'Live updates'],
-    label: 'Overview',
+    label: 'What I do ?',
     url: '/'
   },
   {
     color: '#8c00ff10',
-    title: 'Education',
+    title: 'What sets Me Apart',
     description: ['Work together seamlessly', 'Share knowledge', 'Learn faster'],
-    label: 'Teamwork',
+    label: 'My Strengths !',
     url: '/'
   },
   {
     color: '#ffbb0010',
-    title: 'Automation',
+    title: 'Academic Background',
     description: ['Streamline workflows', 'Save time', 'Reduce errors'],
-    label: 'Efficiency',
+    label: 'Education .',
     url: '/'
   },
   {
     color: '#00b3ff10',
-    title: 'Integration',
+    title: 'Interests',
     description: ['Connect favorite tools', 'Sync data seamlessly', 'Build workflows'],
-    label: 'Connectivity',
+    label: 'What I Enjoy ?',
     url: '/'
   },
   {
     color: '#ff000010',
-    title: 'Security',
+    title: 'Principles & Values',
     description: ['Enterprise-grade protection', 'Data encryption', 'Compliance ready'],
-    label: 'Protection',
+    label: 'How I Work ?',
     url: '/'
   }
 ];

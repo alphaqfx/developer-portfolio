@@ -713,7 +713,9 @@ class InfiniteGridMenu {
             const img = new Image();
             img.crossOrigin = 'anonymous';
             img.onload = () => resolve(img);
-            img.src = item.image;
+            // Handle both URL strings and imported image objects (e.g., from Next.js)
+            const imageSrc = typeof item.image === 'string' ? item.image : item.image.src || item.image;
+            img.src = imageSrc;
           })
       )
     ).then(images => {

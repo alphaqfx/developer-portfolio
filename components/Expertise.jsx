@@ -3,11 +3,9 @@ import React from 'react'
 import Image from 'next/image'
 import ChromaGrid from './ChromaGrid.jsx'
 import { motion } from 'framer-motion'
-import { SiDotnet, SiOpenai} from 'react-icons/si';
-import { FaAws, FaInstagram  } from 'react-icons/fa';
+import { SiHtml5, SiDotnet, SiOpenai } from 'react-icons/si';
+import { FaAws, FaInstagram } from 'react-icons/fa';
 import { VscAzure } from 'react-icons/vsc';
-import { IoLogoJavascript } from "react-icons/io";
-
 
 
 const Expertise = () => {
@@ -17,8 +15,8 @@ const Expertise = () => {
     {
 
       title: "Azure Cloud Services",
-      subtitle: ["Infra. Management, Admin.","Compute Servers, DevOps, CI/CD", ],
-      icon: <VscAzure className="w-15 h-15" />,
+      subtitle: ["Infra. Management, Admin.","Compute Servers, DevOps, CI/CD"],
+      icon: <VscAzure className="w-15 h-20" />,
       borderColor: "#428bffff",
       gradient: "linear-gradient(145deg, #3ba5f6ff, #1827b1ff)",
     },
@@ -26,15 +24,15 @@ const Expertise = () => {
 
       title: "AWS Cloud Solutions",
       subtitle: ["CDNs, Storage, App Services", "VMs, Cloud Security, Optimization"],
-      icon: <FaAws className="w-15 h-15" />,
+      icon: <FaAws className="w-15 h-20" />,
       borderColor: "#f49529ff",
-      gradient: "linear-gradient(180deg, #db8a27ff, #8d3f00ff)",
+      gradient: "linear-gradient(180deg, #ff9c23ff, #954708ff)",
     },
     {
 
       title: "Azure OpenAI Services",
       subtitle: ["AI Model Integration, Chatbots", "Gen AI Solutions, NLP, Agentic AI"],
-      icon: <SiOpenai className="w-15 h-15" />,
+      icon: <SiOpenai className="w-15 h-20" />,
       borderColor: "#10B981",
       gradient: "linear-gradient(180deg, #10B981, #035235ff)",
     },
@@ -42,15 +40,15 @@ const Expertise = () => {
 
       title: "Frontend Development",
       subtitle: ["Component Design, UX/UI, SPA", "React, Next.js, Vercel Deployment"],
-      icon: <IoLogoJavascript className="w-15 h-15" />,
+      icon: <SiHtml5 className="w-15 h-20" />,
       borderColor: "#ddb41dff",
-      gradient: "linear-gradient(180deg, #f6e445ff, #7e5904ff)",
+      gradient: "linear-gradient(180deg, #ffd000ff, #8b6306ff)",
     },
     {
 
       title: "Backend Development",
       subtitle: ["MVC, API Design, Microservices", "Sitecore CMS, Node.js Integration"],
-      icon: <SiDotnet className="w-15 h-15" />,
+      icon: <SiDotnet className="w-15 h-20" />,
       borderColor: "#bf66f3ff",
       gradient: "linear-gradient(180deg, #9649e8ff, #4b089cff)",
     },
@@ -58,16 +56,16 @@ const Expertise = () => {
 
       title: "Digital Marketing",
       subtitle: ["SEO/SEM, Social Media Branding", "Content Marketing, Leads Gen."],
-      icon: <FaInstagram className="w-15 h-15" />,
-      borderColor: "#fd3b48ff",
-      gradient: "linear-gradient(180deg, #e44242ff, #720026ff)",
+      icon: <FaInstagram className="w-15 h-20" />,
+      borderColor: "#fd3b89ff",
+      gradient: "linear-gradient(180deg, #d90576ff, #d25101ff)",
     }
   ];
   return (
     <div className='w-full px-[12%] mt-40 scroll-mt20'>
       <h2 className='text-center text-5xl font-jost'>What I Offer</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-jost'>
-        My expertise spans across Cloud Computing, Gen-AI integration, and Full-Stack Web Development. Delivering innovative solutions that drive business growth and operational efficiency.
+        My expertise spans across Cloud Computing, Gen-AI integration and Full-Stack Web Development. Delivering innovative solutions that drive business growth and operational efficiency.
       </p>
       <div className='flex-1 mx-auto justify-center'>
         <ChromaGrid

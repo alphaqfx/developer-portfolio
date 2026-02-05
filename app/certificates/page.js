@@ -40,7 +40,7 @@ export default function CertificatesPage() {
       >
         <Silk
           speed={4.2}
-          scale={1}
+          scale={1.25}
           color="#007d53ff"
           noiseIntensity={1}
           rotation={0}

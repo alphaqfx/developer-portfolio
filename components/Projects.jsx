@@ -1,30 +1,31 @@
 import React from 'react'
 import InfiniteMenu from "@/components/InfiniteMenu.jsx";
+import { assets } from "@/assets/assets.js";
 
 const items = [
     {
-        image: 'https://picsum.photos/300/300?',
+        image: assets.stepout,
         link: 'https://google.com/',
-        title: 'Item 1',
-        description: 'This is pretty cool, right?'
+        title: 'Step Out!',
+        description: 'An autonomous agent that provides real-time weather updates and forecasts for any location, helping users to be aware of the day ahead.'
     },
     {
-        image: 'https://picsum.photos/400/400?',
+        image: assets.stepout,
         link: 'https://google.com/',
-        title: 'Item 2',
-        description: 'This is pretty cool, right?'
+        title: 'Step Out!',
+        description: 'An autonomous agent that provides real-time weather updates and forecasts for any location, helping users to be aware of the day ahead.'
     },
     {
-        image: 'https://picsum.photos/500/500?',
+        image: assets.stepout,
         link: 'https://google.com/',
-        title: 'Item 3',
-        description: 'This is pretty cool, right?'
+        title: 'Step Out!',
+        description: 'An autonomous agent that provides real-time weather updates and forecasts for any location, helping users to be aware of the day ahead.'
     },
     {
-        image: 'https://picsum.photos/600/600?',
+        image: assets.stepout,
         link: 'https://google.com/',
-        title: 'Item 4',
-        description: 'This is pretty cool, right?'
+        title: 'Step Out!',
+        description: 'An autonomous agent that provides real-time weather updates and forecasts for any location, helping users to be aware of the day ahead.'
     }
 ];
 

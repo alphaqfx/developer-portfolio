@@ -4,14 +4,24 @@ import Image from 'next/image'
 import MagicBento from './MagicBento'
 import { motion } from 'framer-motion'
 import TiltedCard from './TiltedCard.jsx'
+import ElectricBorder from './ElectricBorder.jsx'
 
 const About = ({ }) => {
     return (
-        <div id='about' className='w-full max-w-7xl mx-auto px-6 py-10 mt-30 lg:mt-40 scroll-mt20'>
-            <h2 className='text-center text-5xl font-jost'>About Me</h2>
+        <div id='about' className='w-full max-w-7xl mx-auto px-6 py-10 mt-30 lg:mt-35 scroll-mt20'>
+            <h4 className='text-white text-center mb-2 text-xl font-jost'>Professional Details</h4>
+            <h2 className='text-center text-5xl font-jost'>Get to Know Me</h2>
             <div className='flex w-full flex-col lg:flex-row items-start gap-12 my-20'>
                 <div id='profile-mobile' className='md:hidden w-65 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
-                    <Image src={assets.user_image} alt="" className='w-full rounded-3xl' />
+                    <ElectricBorder
+                        color="#ffffff"
+                        speed={0.55}
+                        chaos={0.01}
+                        thickness={5}
+                        style={{ borderRadius: 30 }}
+                    >                    
+                        <Image src={assets.user_image} alt="" className='w-full rounded-3xl' />
+                    </ElectricBorder>
                     <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
                         Vignesh Uthiravelu
                     </p>
@@ -43,7 +53,7 @@ const About = ({ }) => {
                         textAutoHide={true}
                         enableStars={false}
                         enableSpotlight={false}
-                        enableBorderGlow={false}
+                        enableBorderGlow={true}
                         enableTilt={false}
                         enableMagnetism={false}
                         clickEffect={false}

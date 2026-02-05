@@ -3,9 +3,9 @@
   --sat: 69%;
   --white: hsl(0, 0%, 100%);
   --purple-primary: rgba(132, 0, 255, 1);
-  --purple-glow: rgb(255, 255, 255);
+  --purple-glow: rgba(255, 255, 255, 0.195);
   --purple-border: rgba(132, 0, 255, 0.8);
-  --border-color: #ffffff95,;
+  --border-color: rgba(255, 255, 255, 0.500);
   --background-dark: #060010;
   color-scheme: light dark;
 }
@@ -42,7 +42,7 @@
 }
 
 .magic-bento-card:hover {
-  transform: translateY(-2px);
+  transform: scale(1.005);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -206,7 +206,7 @@
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   z-index: 1;
 }
 
@@ -216,8 +216,9 @@
 
 .magic-bento-card--border-glow:hover {
   box-shadow:
-    0 4px 20px rgba(46, 24, 78, 0.4),
-    0 0 30px var(--purple-glow);
+    0  0 05px rgb(255, 255, 255),
+    0  0 10px rgba(255, 255, 255, 0.5),
+    0 0 50px var(--purple-glow);
 }
 
 .particle-container {

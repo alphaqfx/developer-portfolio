@@ -9,6 +9,8 @@ import google from './google.png';
 import ibm from './ibm.png';
 import sitecore from './sitecore.png';
 import copilot from './copilot.png';
+import stepout from './step-out.png';
+
 
 
 export const assets = {
@@ -22,7 +24,7 @@ export const assets = {
     google,
     ibm,
     sitecore,
-    copilot 
-    
+    copilot,
+    stepout,
 };
 
