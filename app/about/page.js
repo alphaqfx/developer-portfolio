@@ -20,25 +20,30 @@ export default function AboutPage() {
         }}
       >
         <Galaxy
-          mouseRepulsion={false}
-          mouseInteraction={false}
-          density={1}
-          glowIntensity={0.25}
+          starSpeed={1}
+          density={2}
+          hueShift={130}
+          speed={0.2}
+          glowIntensity={0.1}
           saturation={0}
-          hueShift={240}
+          mouseRepulsion
+          repulsionStrength={0}
+          twinkleIntensity={1}
+          rotationSpeed={0}
+          transparent={false}
         />
       </div>
       <div id="gradual-blur">
-      <GradualBlur
-        target="page"
-        position="top"
-        height="8.5rem"
-        strength={1.5}
-        divCount={6.0}
-        curve="bezier"
-        exponential={true}
-        opacity={1}
-      />
+        <GradualBlur
+          target="page"
+          position="top"
+          height="8.5rem"
+          strength={1.5}
+          divCount={6.0}
+          curve="bezier"
+          exponential={true}
+          opacity={1}
+        />
       </div>
       <Navbar />
       <About />

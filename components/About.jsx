@@ -3,49 +3,37 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import MagicBento from './MagicBento'
 import { motion } from 'framer-motion'
-import TiltedCard from './TiltedCard.jsx'
-import ElectricBorder from './ElectricBorder.jsx'
+import { SiGooglegemini, SiGooglecloud } from "react-icons/si";
+import { FaCode } from "react-icons/fa";
+import { TbLineDashed } from "react-icons/tb";
+
+
 
 const About = ({ }) => {
     return (
-        <div id='about' className='w-full max-w-7xl mx-auto px-6 py-10 mt-30 lg:mt-35 scroll-mt20'>
+        <div className='w-full max-w-7xl mx-auto px-6 py-10 mt-28 lg:mt-32 scroll-mt20'>
             <h4 className='text-white text-center mb-2 text-xl font-jost'>Professional Details</h4>
-            <h2 className='text-center text-5xl font-jost'>Get to Know Me</h2>
-            <div className='flex w-full flex-col lg:flex-row items-start gap-12 my-20'>
-                <div id='profile-mobile' className='md:hidden w-65 sm:w-80 rounded-3xl max-w-none mx-auto lg:mx-0'>
-                    <ElectricBorder
-                        color="#ffffff"
-                        speed={0.55}
-                        chaos={0.01}
-                        thickness={5}
-                        style={{ borderRadius: 30 }}
-                    >                    
-                        <Image src={assets.user_image} alt="" className='w-full rounded-3xl' />
-                    </ElectricBorder>
-                    <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
+            <h2 className='text-center text-4xl font-jost'>Get to Know Me</h2>
+            <div className='flex w-full flex-col lg:flex-row items-start gap-4 my-10'>
+                <div className=' w-64 rounded-3xl mx-auto relative mt-3'>
+
+                    <Image src={assets.user_image} alt="" className='hover:scale-102 duration-500 relative w-auto rounded-4xl' />
+
+                    <p className="w-full text-center mt-6 my-4  tilted-card-demo-text border rounded-full border-white-500">
                         Vignesh Uthiravelu
                     </p>
-                </div>
-                <div id='profile-desktop' className='hidden md:flex mx-auto mt-5'>
-                    <TiltedCard
-                        imageSrc="https://vignesh-uthiravelu.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser-image.6384f67d.png&w=1920&q=75"
-                        altText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
-                        captionText="Vignesh Uthiravelu - Gen AI & Cloud Engineer"
-                        containerHeight="400px"
-                        containerWidth="300px"
-                        imageHeight="400px"
-                        imageWidth="300px"
-                        rotateAmplitude={5}
-                        scaleOnHover={1.05}
-                        showMobileWarning={false}
-                        showTooltip={false}
-                        displayOverlayContent={true}
-                        overlayContent={
-                            <p className="text-center tilted-card-demo-text border rounded-full border-white-500">
-                                Vignesh Uthiravelu
-                            </p>
-                        }
-                    />
+
+                    <p className="w-full text-center text-lg font-medium">
+                        Gen AI & Cloud Engineer
+                    </p>
+
+                    <div className='flex grid-cols-5 gap-4 mt-4 my-4 mx-auto items-center justify-center '>
+                        <TbLineDashed alt="" className='  w-8 h-8  ' />
+                        <SiGooglegemini alt="" className='  w-8 h-8  ' />
+                        <SiGooglecloud alt="" className='  w-8 h-8  ' />
+                        <FaCode alt="" className='  w-8 h-8  ' />
+                        <TbLineDashed alt="" className='  w-8 h-8  ' />
+                    </div>
 
                 </div>
                 <div id='bento-grid' className='flex-1 mx-auto justify-center '>

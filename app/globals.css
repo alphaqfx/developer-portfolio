@@ -43,31 +43,12 @@
 .tilted-card-demo-text {
   text-transform: capitalize;
   color: #ffffff;
+  font-size: large;
   background: rgba(0, 0, 0, 0.35);
   border-radius: 15px;
-  margin: 2em;
   padding: .5rem 1em;
   font-family: Figtree;
   font-weight: 800;
   box-shadow: 0 5px 30px #06001059;
-  transform: translate(2em,24em);
   
 }
-
-@media (max-width: 640px) {
-  .tilted-card-demo-text {
-  text-transform: capitalize;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 15px;
-  margin: 2em;
-  padding: .5rem 1em;
-  font-family: Figtree;
-  font-weight: 800;
-  box-shadow: 0 5px 30px #06001059;
-  transform: translate(0em,1em);
-  
-}
-}
-
-

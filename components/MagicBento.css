@@ -5,7 +5,7 @@
   --purple-primary: rgba(132, 0, 255, 1);
   --purple-glow: rgba(255, 255, 255, 0.195);
   --purple-border: rgba(132, 0, 255, 0.8);
-  --border-color: rgba(255, 255, 255, 0.500);
+  --border-color: rgba(255, 255, 255, 0.645);
   --background-dark: #060010;
   color-scheme: light dark;
 }
@@ -13,8 +13,8 @@
 .card-grid {
   display: grid;
   gap: 0.5em;
-  padding: 0.75em;
-  max-width: 54em;
+  padding: 0.5em;
+  max-width: 50em;
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 }
 
@@ -42,8 +42,7 @@
 }
 
 .magic-bento-card:hover {
-  transform: scale(1.005);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ffffffbd;
 }
 
 .magic-bento-card__header,
@@ -63,7 +62,7 @@
 }
 
 .magic-bento-card__label {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .magic-bento-card__title,
@@ -168,20 +167,24 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .magic-bento-card:nth-child(3) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .magic-bento-card:nth-child(4) {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
+  .magic-bento-card:nth-child(1) {
+    grid-column:1/ span 2;
+    grid-row:1/ span 2;
   }
 
   .magic-bento-card:nth-child(6) {
-    grid-column: 4;
-    grid-row: 3;
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
   }
+
+  .magic-bento-card:nth-child(2),
+  .magic-bento-card:nth-child(3),
+  .magic-bento-card:nth-child(4),
+  .magic-bento-card:nth-child(5) {
+      padding: 0.75em;
+  }
+
+ 
 }
 
 /* Border glow effect */

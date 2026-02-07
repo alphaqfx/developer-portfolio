@@ -12,44 +12,38 @@ const cardData = [
   {
     color: '#006aff10',
     title: 'About Me',
-    description: ['Software Developer', 'Based in India', 'Gen AI Enthusiast'],
+    description: ['Tech. Professional with 3+ years of experience', 'Gen AI & Cloud Enthusiast','Worked across multiple domains & industries', 'Comfortable with Remote / Hybrid work', 'Based in Chennai, India'],
     label: 'Who am I ?',
-    url: '/'
-  },
-  {
-    color: '#2bff0010',
-    title: 'My Work',
-    description: ['Centralized data view', 'Interactive widgets', 'Live updates'],
-    label: 'What I do ?',
-    url: '/'
-  },
-  {
-    color: '#8c00ff10',
-    title: 'What sets Me Apart',
-    description: ['Work together seamlessly', 'Share knowledge', 'Learn faster'],
-    label: 'My Strengths !',
-    url: '/'
   },
   {
     color: '#ffbb0010',
-    title: 'Academic Background',
-    description: ['Streamline workflows', 'Save time', 'Reduce errors'],
-    label: 'Education .',
-    url: '/'
+    title: 'Formal Education',
+    description: ['B. Tech in Computer Science & Engineering', 'Certified in Cloud Computing, Data Science & AI', 'Copilot Certified Developer'],
+    label: 'Academics .',
   },
   {
     color: '#00b3ff10',
-    title: 'Interests',
-    description: ['Connect favorite tools', 'Sync data seamlessly', 'Build workflows'],
-    label: 'What I Enjoy ?',
-    url: '/'
+    title: 'What sets Me Apart ?',
+    description: ['Quick learner of new tech stacks', 'Adaptable across multiple tools and platforms', 'Clean & scalable coding practices'],
+    label: 'My Strengths !',
+  },
+  {
+    color: '#2bff0010',
+    title: 'My Interests .',
+    description: ['LLMs & Cloud Native AI Agents', 'Building side projects & Gen AI powered solutions','Learning & Experimenting with new AI Models'],
+    label: 'What I enjoy ?',
   },
   {
     color: '#ff000010',
     title: 'Principles & Values',
-    description: ['Enterprise-grade protection', 'Data encryption', 'Compliance ready'],
-    label: 'How I Work ?',
-    url: '/'
+    description: ['Productive, collaborative & team-driven approach', 'Integrity & transparency in work', 'Continuous learning & upskilling in working domain'],
+    label: 'How I work ?',
+  },
+  {
+    color: '#8c00ff10',
+    title: 'My Work',
+    description: ['Full-stack Web Development (.NET, React, Next.js)', 'Scalable Cloud Engineering & DevOps','CI/CD & Deployment Pipelines', 'Building Cloud Native AI Apps & Solutions', 'Digital Marketing & Branding Services'],
+    label: "What I'm good at ?",
   }
 ];
 
